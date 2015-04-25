@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>512</width>
+    <height>348</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>512</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFirma">
+    <property name="title">
+     <string>Firma</string>
+    </property>
+    <widget class="QMenu" name="menuSkladi_ta">
+     <property name="title">
+      <string>Skladišta</string>
+     </property>
+     <addaction name="actionNovo"/>
+     <addaction name="actionIzmeni_7"/>
+     <addaction name="actionObri_i_7"/>
+     <addaction name="actionPrika_i_2"/>
+    </widget>
+    <addaction name="actionNova"/>
+    <addaction name="actionOtvori"/>
+    <addaction name="actionSnimi"/>
+    <addaction name="actionObri_i_2"/>
+    <addaction name="actionIzmeni_3"/>
+    <addaction name="menuSkladi_ta"/>
+    <addaction name="actionZatvori"/>
+   </widget>
+   <widget class="QMenu" name="menuArtikli">
+    <property name="title">
+     <string>Artikli</string>
+    </property>
+    <addaction name="actionNovi"/>
+    <addaction name="actionIzmeni"/>
+    <addaction name="actionObri_i"/>
+    <addaction name="actionPrikazi"/>
+    <addaction name="actionUvezi"/>
+   </widget>
+   <widget class="QMenu" name="menuKomintenti">
+    <property name="title">
+     <string>Komintenti</string>
+    </property>
+    <addaction name="actionDodaj"/>
+    <addaction name="actionIzmeni_2"/>
+    <addaction name="actionObri_i_3"/>
+    <addaction name="actionPrika_i"/>
+   </widget>
+   <widget class="QMenu" name="menuDokumenta">
+    <property name="title">
+     <string>Dokumenta</string>
+    </property>
+    <widget class="QMenu" name="menuKalkulacije">
+     <property name="title">
+      <string>Kalkulacije</string>
+     </property>
+     <addaction name="actionNova_2"/>
+     <addaction name="actionIzmeni_4"/>
+     <addaction name="actionObri_i_4"/>
+    </widget>
+    <widget class="QMenu" name="menuProfakture">
+     <property name="title">
+      <string>Profakture</string>
+     </property>
+     <addaction name="actionNova_3"/>
+     <addaction name="actionIzmeni_5"/>
+     <addaction name="actionObri_i_5"/>
+    </widget>
+    <widget class="QMenu" name="menuFakture">
+     <property name="title">
+      <string>Fakture</string>
+     </property>
+     <addaction name="actionNova_4"/>
+     <addaction name="actionIzmeni_6"/>
+     <addaction name="actionObri_i_6"/>
+    </widget>
+    <widget class="QMenu" name="menuNivelacije">
+     <property name="title">
+      <string>Nivelacije</string>
+     </property>
+     <addaction name="actionNova_5"/>
+     <addaction name="actionIzmeni_8"/>
+     <addaction name="actionObri_i_8"/>
+    </widget>
+    <widget class="QMenu" name="menuPopis">
+     <property name="title">
+      <string>Popis</string>
+     </property>
+     <addaction name="actionNova_6"/>
+     <addaction name="actionIzmeni_9"/>
+     <addaction name="actionObri_i_9"/>
+    </widget>
+    <widget class="QMenu" name="menuPrijemnice">
+     <property name="title">
+      <string>Prijemnice</string>
+     </property>
+     <addaction name="actionNova_7"/>
+     <addaction name="actionIzmeni_10"/>
+     <addaction name="actionObri_i_10"/>
+    </widget>
+    <widget class="QMenu" name="menuTrebovanje">
+     <property name="title">
+      <string>Trebovanje</string>
+     </property>
+     <addaction name="actionNova_8"/>
+     <addaction name="actionIzmeni_11"/>
+     <addaction name="actionObri_i_11"/>
+    </widget>
+    <widget class="QMenu" name="menuOtpremnice">
+     <property name="title">
+      <string>Otpremnice</string>
+     </property>
+     <addaction name="actionNova_9"/>
+     <addaction name="actionIzmeni_12"/>
+     <addaction name="actionObri_i_12"/>
+    </widget>
+    <widget class="QMenu" name="menuKnjiga_EDI">
+     <property name="title">
+      <string>Knjiga EDI</string>
+     </property>
+     <addaction name="actionNova_10"/>
+     <addaction name="actionIzmeni_13"/>
+     <addaction name="actionObri_i_13"/>
+    </widget>
+    <widget class="QMenu" name="menuKEPU">
+     <property name="title">
+      <string>KEPU</string>
+     </property>
+     <addaction name="actionNova_11"/>
+     <addaction name="actionIzmeni_14"/>
+     <addaction name="actionObri_i_14"/>
+    </widget>
+    <addaction name="menuKalkulacije"/>
+    <addaction name="menuProfakture"/>
+    <addaction name="menuFakture"/>
+    <addaction name="menuNivelacije"/>
+    <addaction name="menuPopis"/>
+    <addaction name="menuPrijemnice"/>
+    <addaction name="menuTrebovanje"/>
+    <addaction name="menuOtpremnice"/>
+    <addaction name="menuKnjiga_EDI"/>
+    <addaction name="menuKEPU"/>
+   </widget>
+   <widget class="QMenu" name="menuKorisni_materijal">
+    <property name="title">
+     <string>Korisni materijal</string>
+    </property>
+    <addaction name="action_ablon_uplatnice"/>
+    <addaction name="actionNalog_za_isplatu"/>
+    <addaction name="actionNalog_za_prenos"/>
+   </widget>
+   <widget class="QMenu" name="menuO_nama">
+    <property name="title">
+     <string>Pomoć</string>
+    </property>
+    <addaction name="actionLokalna_pomo"/>
+    <addaction name="actionOnline_pomo"/>
+    <addaction name="actionO_aplikaciji"/>
+    <addaction name="actionO_nama"/>
+   </widget>
+   <addaction name="menuFirma"/>
+   <addaction name="menuArtikli"/>
+   <addaction name="menuKomintenti"/>
+   <addaction name="menuDokumenta"/>
+   <addaction name="menuKorisni_materijal"/>
+   <addaction name="menuO_nama"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionNova">
+   <property name="text">
+    <string>Nova</string>
+   </property>
+  </action>
+  <action name="actionOtvori">
+   <property name="text">
+    <string>Otvori</string>
+   </property>
+  </action>
+  <action name="actionSnimi">
+   <property name="text">
+    <string>Snimi</string>
+   </property>
+  </action>
+  <action name="actionZatvori">
+   <property name="text">
+    <string>Zatvori</string>
+   </property>
+  </action>
+  <action name="actionNovi">
+   <property name="text">
+    <string>Dodaj</string>
+   </property>
+  </action>
+  <action name="actionIzmeni">
+   <property name="text">
+    <string>Izmeni</string>
+   </property>
+  </action>
+  <action name="actionPrikazi">
+   <property name="text">
+    <string>Prikaži</string>
+   </property>
+  </action>
+  <action name="actionUvezi">
+   <property name="text">
+    <string>Uvezi</string>
+   </property>
+  </action>
+  <action name="actionDodaj">
+   <property name="text">
+    <string>Dodaj</string>
+   </property>
+  </action>
+  <action name="actionIzmeni_2">
+   <property name="text">
+    <string>Izmeni</string>
+   </property>
+  </action>
+  <action name="actionObri_i">
+   <property name="text">
+    <string>Obriši</string>
+   </property>
+  </action>
+  <action name="actionObri_i_2">
+   <property name="text">
+    <string>Obriši</string>
+   </property>
+  </action>
+  <action name="actionObri_i_3">
+   <property name="text">
+    <string>Obriši</string>
+   </property>
+  </action>
+  <action name="actionIzmeni_3">
+   <property name="text">
+    <string>Izmeni</string>
+   </property>
+  </action>
+  <action name="actionPrika_i">
+   <property name="text">
+    <string>Prikaži</string>
+   </property>
+  </action>
+  <action name="actionNova_2">
+   <property name="text">
+    <string>Nova</string>
+   </property>
+  </action>
+  <action name="actionIzmeni_4">
+   <property name="text">
+    <string>Izmeni</string>
+   </property>
+  </action>
+  <action name="actionObri_i_4">
+   <property name="text">
+    <string>Obriši</string>
+   </property>
+  </action>
+  <action name="actionNova_3">
+   <property name="text">
+    <string>Nova</string>
+   </property>
+  </action>
+  <action name="actionIzmeni_5">
+   <property name="text">
+    <string>Izmeni</string>
+   </property>
+  </action>
+  <action name="actionObri_i_5">
+   <property name="text">
+    <string>Obriši</string>
+   </property>
+  </action>
+  <action name="actionNova_4">
+   <property name="text">
+    <string>Nova</string>
+   </property>
+  </action>
+  <action name="actionIzmeni_6">
+   <property name="text">
+    <string>Izmeni</string>
+   </property>
+  </action>
+  <action name="actionObri_i_6">
+   <property name="text">
+    <string>Obriši</string>
+   </property>
+  </action>
+  <action name="actionNovo">
+   <property name="text">
+    <string>Dodaj</string>
+   </property>
+  </action>
+  <action name="actionIzmeni_7">
+   <property name="text">
+    <string>Izmeni</string>
+   </property>
+  </action>
+  <action name="actionObri_i_7">
+   <property name="text">
+    <string>Obriši</string>
+   </property>
+  </action>
+  <action name="actionPrika_i_2">
+   <property name="text">
+    <string>Prikaži</string>
+   </property>
+  </action>
+  <action name="actionNova_5">
+   <property name="text">
+    <string>Nova</string>
+   </property>
+  </action>
+  <action name="actionIzmeni_8">
+   <property name="text">
+    <string>Izmeni</string>
+   </property>
+  </action>
+  <action name="actionObri_i_8">
+   <property name="text">
+    <string>Obriši</string>
+   </property>
+  </action>
+  <action name="actionNova_6">
+   <property name="text">
+    <string>Nova</string>
+   </property>
+  </action>
+  <action name="actionIzmeni_9">
+   <property name="text">
+    <string>Izmeni</string>
+   </property>
+  </action>
+  <action name="actionObri_i_9">
+   <property name="text">
+    <string>Obriši</string>
+   </property>
+  </action>
+  <action name="actionNova_7">
+   <property name="text">
+    <string>Nova</string>
+   </property>
+  </action>
+  <action name="actionIzmeni_10">
+   <property name="text">
+    <string>Izmeni</string>
+   </property>
+  </action>
+  <action name="actionObri_i_10">
+   <property name="text">
+    <string>Obriši</string>
+   </property>
+  </action>
+  <action name="actionNova_8">
+   <property name="text">
+    <string>Nova</string>
+   </property>
+  </action>
+  <action name="actionIzmeni_11">
+   <property name="text">
+    <string>Izmeni</string>
+   </property>
+  </action>
+  <action name="actionObri_i_11">
+   <property name="text">
+    <string>Obriši</string>
+   </property>
+  </action>
+  <action name="actionNova_9">
+   <property name="text">
+    <string>Nova</string>
+   </property>
+  </action>
+  <action name="actionIzmeni_12">
+   <property name="text">
+    <string>Izmeni</string>
+   </property>
+  </action>
+  <action name="actionObri_i_12">
+   <property name="text">
+    <string>Obriši</string>
+   </property>
+  </action>
+  <action name="actionNova_10">
+   <property name="text">
+    <string>Nova</string>
+   </property>
+  </action>
+  <action name="actionIzmeni_13">
+   <property name="text">
+    <string>Izmeni</string>
+   </property>
+  </action>
+  <action name="actionObri_i_13">
+   <property name="text">
+    <string>Obriši</string>
+   </property>
+  </action>
+  <action name="actionNova_11">
+   <property name="text">
+    <string>Nova</string>
+   </property>
+  </action>
+  <action name="actionIzmeni_14">
+   <property name="text">
+    <string>Izmeni</string>
+   </property>
+  </action>
+  <action name="actionObri_i_14">
+   <property name="text">
+    <string>Obriši</string>
+   </property>
+  </action>
+  <action name="actionLokalna_pomo">
+   <property name="text">
+    <string>Lokalna pomoć</string>
+   </property>
+  </action>
+  <action name="actionOnline_pomo">
+   <property name="text">
+    <string>Online pomoć</string>
+   </property>
+  </action>
+  <action name="actionO_nama">
+   <property name="text">
+    <string>O nama</string>
+   </property>
+  </action>
+  <action name="actionO_aplikaciji">
+   <property name="text">
+    <string>O aplikaciji</string>
+   </property>
+  </action>
+  <action name="action_ablon_uplatnice">
+   <property name="text">
+    <string>Nalog za uplatu</string>
+   </property>
+  </action>
+  <action name="actionNalog_za_isplatu">
+   <property name="text">
+    <string>Nalog za isplatu</string>
+   </property>
+  </action>
+  <action name="actionNalog_za_prenos">
+   <property name="text">
+    <string>Nalog za prenos</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
