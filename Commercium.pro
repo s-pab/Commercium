@@ -15,6 +15,7 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    artikli.h
 
 FORMS    += commercium.ui
