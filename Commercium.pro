@@ -16,7 +16,7 @@ SOURCES += main.cpp\
         mainwindow.cpp
 
 HEADERS  += mainwindow.h \
-    artikli.h \
+    artikl.h \
     komitent.h \
     kakulacije.h
 
