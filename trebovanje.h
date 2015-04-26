@@ -7,7 +7,6 @@
 class Trebovanje
 {
 private:
-    QDate datumTrebovanja;
     int nomenBroj; //ne znam sta je tako sam video na formularu
     Artikl artikl;
     double iznos;

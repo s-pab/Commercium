@@ -17,12 +17,10 @@ private:
 public:
     Otpremnica();
     Otpremnica(int sifra,Komitent komitent);
-    Artikl napraviArtikl();
-    void dodajArtikl(Artikl artikl);
+    void dodajArtikl();
     void obrisiArtikl();
     void izmeniArtikl();
     void obracunaj();
-    void setSifra();
     int getSifra();
 
 };

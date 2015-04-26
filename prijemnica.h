@@ -9,15 +9,13 @@ class Prijemnica
 private:
     int sifra;
     Artikl artikl;
-    Komitent komintent;
+    Komitent komitent;
     double ukupnaVrednost;
 public:
     Prijemnica();
-    Prijemnica(Artikl artikl,Komitent komintent);
-    Artikl napraviArtikl();
+    Prijemnica(Artikl artikl,Komitent komitent);
     double obracunaj();
-    void setSifra();
-    void dodajArtikl(Artikl artikl);
+    void dodajArtikl();
     void obrisiArtikl();
     void izmeniArtikl();
     int getSifra();
