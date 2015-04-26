@@ -20,6 +20,8 @@ private slots:
 
     void on_actionNova_triggered();
 
+    void on_actionNova_2_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

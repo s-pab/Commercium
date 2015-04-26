@@ -13,7 +13,8 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    formakalkulacije.cpp
 
 HEADERS  += mainwindow.h \
     artikl.h \
@@ -25,6 +26,8 @@ HEADERS  += mainwindow.h \
     trebovanje.h \
     faktura.h \
     profaktura.h \
-    knjigaedi.h
+    knjigaedi.h \
+    formakalkulacije.h
 
-FORMS    += commercium.ui
+FORMS    += commercium.ui \
+    formakalkulacije.ui
