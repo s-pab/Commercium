@@ -29,6 +29,6 @@ void MainWindow::on_actionNova_triggered()
 
 void MainWindow::on_actionNova_2_triggered()
 {
-    FormaKalkulacije fk = new FormaKalkulacije(this);
-    fk.show();
+    FormaKalkulacije *fk = new FormaKalkulacije(this);
+    fk->show();
 }
