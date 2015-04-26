@@ -8,8 +8,5 @@ S-PAB Team:
 	* Petar Perić
 	* Aleksandar Ilijev
 	* Bojan Ilić
-=======
-
-
 Test edit
 >>>>>>> origin/master
