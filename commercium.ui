@@ -195,20 +195,32 @@
    <property name="text">
     <string>Nova</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
   </action>
   <action name="actionOtvori">
    <property name="text">
     <string>Otvori</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
    </property>
   </action>
   <action name="actionSnimi">
    <property name="text">
     <string>Snimi</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
   </action>
   <action name="actionZatvori">
    <property name="text">
     <string>Zatvori</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
    </property>
   </action>
   <action name="actionNovi">
