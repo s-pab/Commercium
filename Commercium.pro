@@ -24,6 +24,7 @@ HEADERS  += mainwindow.h \
     prijemnica.h \
     trebovanje.h \
     faktura.h \
-    profaktura.h
+    profaktura.h \
+    knjigaedi.h
 
 FORMS    += commercium.ui
