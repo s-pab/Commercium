@@ -18,6 +18,8 @@ public:
 private slots:
     void on_actionZatvori_triggered();
 
+    void on_actionNova_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

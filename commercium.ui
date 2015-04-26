@@ -162,9 +162,28 @@
     <property name="title">
      <string>Korisni materijal</string>
     </property>
-    <addaction name="action_ablon_uplatnice"/>
-    <addaction name="actionNalog_za_isplatu"/>
-    <addaction name="actionNalog_za_prenos"/>
+    <widget class="QMenu" name="menuNalozi">
+     <property name="title">
+      <string>Nalozi</string>
+     </property>
+     <addaction name="action_ablon_uplatnice"/>
+     <addaction name="actionNalog_za_isplatu"/>
+     <addaction name="actionNalog_za_prenos"/>
+    </widget>
+    <widget class="QMenu" name="menuType_Here">
+     <property name="title">
+      <string>Type Here</string>
+     </property>
+    </widget>
+    <widget class="QMenu" name="menuObavezna_dokumenta">
+     <property name="title">
+      <string>Obavezna dokumenta</string>
+     </property>
+     <addaction name="actionUzimite_ra_un"/>
+    </widget>
+    <addaction name="menuNalozi"/>
+    <addaction name="menuObavezna_dokumenta"/>
+    <addaction name="menuType_Here"/>
    </widget>
    <widget class="QMenu" name="menuO_nama">
     <property name="title">
@@ -195,20 +214,32 @@
    <property name="text">
     <string>Nova</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
   </action>
   <action name="actionOtvori">
    <property name="text">
     <string>Otvori</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
    </property>
   </action>
   <action name="actionSnimi">
    <property name="text">
     <string>Snimi</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
   </action>
   <action name="actionZatvori">
    <property name="text">
     <string>Zatvori</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
    </property>
   </action>
   <action name="actionNovi">
@@ -469,6 +500,11 @@
   <action name="actionNalog_za_prenos">
    <property name="text">
     <string>Nalog za prenos</string>
+   </property>
+  </action>
+  <action name="actionUzimite_ra_un">
+   <property name="text">
+    <string>Uzimite račun</string>
    </property>
   </action>
  </widget>
