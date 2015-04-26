@@ -14,6 +14,7 @@ public:
     double izracunajUkupnuVrednost();
     void setSifraArtikla();
     void setKolicina();
+    void dodajArtikl(Artikl artikl);
     int getSifraArtikla();
     int getKolicina();
 };
