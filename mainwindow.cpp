@@ -20,3 +20,8 @@ void MainWindow::on_actionZatvori_triggered()
 {
     emit close();
 }
+
+void MainWindow::on_actionNova_triggered()
+{
+
+}
