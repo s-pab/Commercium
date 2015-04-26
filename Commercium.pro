@@ -21,13 +21,13 @@ HEADERS  += mainwindow.h \
     komitent.h \
     kakulacija.h \
     kepu.h \
-    otprenica.h \
     prijemnica.h \
     trebovanje.h \
     faktura.h \
     profaktura.h \
     knjigaedi.h \
-    formakalkulacije.h
+    formakalkulacije.h \
+    otpremnica.h
 
 FORMS    += commercium.ui \
     formakalkulacije.ui
