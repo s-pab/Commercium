@@ -99,14 +99,6 @@
      <addaction name="actionIzmeni_8"/>
      <addaction name="actionObri_i_8"/>
     </widget>
-    <widget class="QMenu" name="menuPopis">
-     <property name="title">
-      <string>Popis</string>
-     </property>
-     <addaction name="actionNova_6"/>
-     <addaction name="actionIzmeni_9"/>
-     <addaction name="actionObri_i_9"/>
-    </widget>
     <widget class="QMenu" name="menuPrijemnice">
      <property name="title">
       <string>Prijemnice</string>
@@ -151,8 +143,8 @@
     <addaction name="menuProfakture"/>
     <addaction name="menuFakture"/>
     <addaction name="menuNivelacije"/>
-    <addaction name="menuPopis"/>
     <addaction name="menuPrijemnice"/>
+    <addaction name="actionPopis"/>
     <addaction name="menuTrebovanje"/>
     <addaction name="menuOtpremnice"/>
     <addaction name="menuKnjiga_EDI"/>
@@ -517,6 +509,11 @@
   <action name="actionUzimite_ra_un">
    <property name="text">
     <string>Uzimite račun</string>
+   </property>
+  </action>
+  <action name="actionPopis">
+   <property name="text">
+    <string>Popis</string>
    </property>
   </action>
  </widget>
