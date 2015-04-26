@@ -17,6 +17,7 @@ SOURCES += main.cpp\
 
 HEADERS  += mainwindow.h \
     artikli.h \
-    Komitent.h 
+    komitent.h \
+    kakulacije.h
 
 FORMS    += commercium.ui

@@ -1,0 +1,15 @@
+#ifndef KAKULACIJE_H
+#define KAKULACIJE_H
+
+#include QString;
+
+class Kalkulacije{
+private:
+    int sifra;
+    
+public:
+    Komitent();
+    Komitent(QString naziv, int sifra, QString ulica, QString mesto, unsigned int pib, QString tekuciRacun);
+};
+
+#endif // KAKULACIJE_H
