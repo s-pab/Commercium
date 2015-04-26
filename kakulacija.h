@@ -25,7 +25,6 @@ public:
     Kalkulacija();
     Kalkulacija(int sifra, Komitent komintent, QDate datum, QString brOtpremnice, int valuta);
     void dodajArtikl(Artikl artikl);
-    Artikl napraviArtikl();
     void obrisiArtikl();
     void izmeniArtikl();
     void obracunaj();
