@@ -2,6 +2,7 @@
 #include "ui_commercium.h"
 
 #include "formakalkulacije.h"
+#include "formatrebovanje.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -31,4 +32,10 @@ void MainWindow::on_actionNova_2_triggered()
 {
     FormaKalkulacije *fk = new FormaKalkulacije(this);
     fk->show();
+}
+
+void MainWindow::on_actionNova_8_triggered()
+{
+    FormaTrebovanje *ft = new FormaTrebovanje(this);
+    ft->show();
 }
