@@ -31,6 +31,7 @@ public:
     double getUkupnoBezPVD();
     double getUkupnoPDV();
     double getUkupnoSaPDV();
+    int getSifra();
 };
 
 #endif // FAKTURA_H

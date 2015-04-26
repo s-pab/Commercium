@@ -35,6 +35,7 @@ public:
     double getUkupnoPDV();
     double getUkupnoBezPVD();
     double getUkupnoSaPDV();
+    int getSifru();
 };
 
 #endif // KAKULACIJA_H
