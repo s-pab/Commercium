@@ -13,13 +13,17 @@ private:
     double ukupnaVrednost;
     //dodaj ovde sve vrednosti koje treba za vrednosti ako imas samo ukupnu vrednost onda ok
     //ako jos nesto ukupno racunas tip pdv ili tako nesto dodaj i to vidi kako sam ja u kalk
+    // ovde je samo treba ukupna vrednost da se sracuna, ima i vrednost ali to je ustvari cena artika
 public:
     Otpremnica();
-    Otrpemnica(int sifra,Komitent komitent);
+    Otpremnica(int sifra,Komitent komitent);
+    Artikl napraviArtikl();
     void dodajArtikl(Artikl artikl);
     void obrisiArtikl();
     void izmeniArtikl();
     void obracunaj();
+    void setSifra();
+    int getSifra();
 
 };
 

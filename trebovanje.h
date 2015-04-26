@@ -1,19 +1,22 @@
 #ifndef TREBOVANJE_H
 #define TREBOVANJE_H
 
-class Treebovanje
+#include"artikl.h"
+
+
+class Trebovanje
 {
 private:
+    QDate datumTrebovanja;
     int nomenBroj; //ne znam sta je tako sam video na formularu
-    int kolicina;
     Artikl artikl;
     double iznos;
 public:
+    Trebovanje();
+    Artikl napraviArtikl();
     void setNomenBroj();
-    void setKolicina();
     double racunajIznos(Artikl artikl);
     int getNomenBroj();
-    int getKolicina();
 };
 
 #endif // TREBOVANJE_H
