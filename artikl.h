@@ -15,6 +15,7 @@ private:
     double rabatProcenat;
     QString jedinicaMere;
     int kategorijaPDV;
+    int kolicina;
 public:
     Artikl();
     Artikl(int sifra,QString naziv,QString jedinica,int kategorija);
@@ -31,6 +32,7 @@ public:
     void setRabatProcenat(double rabatProcenat);
     void setJedinicaMere(QString jedinicaMere);
     void setKategorijaPDV(int kategorijaPDV);
+    void setKolicina(int kolicina);
     int getSifraProizvoda();
     QString getNazivProizvoda();
     double getProdajnaCena();
@@ -41,6 +43,7 @@ public:
     double getRabatProcenat();
     QString getJedinicaMere();
     int getKategorijaPDV();
+    int getKolicina();
 };
 
 #endif // ARTIKL
