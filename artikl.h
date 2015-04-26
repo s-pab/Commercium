@@ -1,9 +1,9 @@
-#ifndef ARTIKLI
-#define ARTIKLI
+#ifndef ARTIKL
+#define ARTIKL
 
 #include<QString>
 
-class Artikli{
+class Artikl{
 private:
     int sifraProizvoda;
     QString nazivProizvoda;
@@ -16,8 +16,8 @@ private:
     QString jedinicaMere;
     int kategorijaPDV;
 public:
-    Artikli();
-    Artikli(int sifra,QString naziv,QString jedinica,int kategorija);
+    Artikl();
+    Artikl(int sifra,QString naziv,QString jedinica,int kategorija);
     void dodajCenu(double nabavna, double marza, double rabat);
     void dodajCenu(double nabavna, double prodajna);
     void dodajCenuProcenat(double nabavna, double marzaP, double rabatP);
@@ -43,5 +43,5 @@ public:
     int getKategorijaPDV();
 };
 
-#endif // ARTIKLI
+#endif // ARTIKL
 
