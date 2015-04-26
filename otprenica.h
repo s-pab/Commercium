@@ -1,22 +1,26 @@
 #ifndef OTPRENICA
 #define OTPRENICA
 
+#include "artikl.h"
+#include "komitent.h"
+
 class Otpremnica
 {
 private:
-    int sifraArtikla;
+    int sifra;
     Artikl artikl;
-    int kolicina;
+    Komitent komitent;
     double ukupnaVrednost;
+    //dodaj ovde sve vrednosti koje treba za vrednosti ako imas samo ukupnu vrednost onda ok
+    //ako jos nesto ukupno racunas tip pdv ili tako nesto dodaj i to vidi kako sam ja u kalk
 public:
     Otpremnica();
-    Otrpemnica(int sifraArtikla,Artikl artikl,int kolicina);
-    double izracunajUkupnuVrednost();
-    void setSifraArtikla();
-    void setKolicina();
+    Otrpemnica(int sifra,Komitent komitent);
     void dodajArtikl(Artikl artikl);
-    int getSifraArtikla();
-    int getKolicina();
+    void obrisiArtikl();
+    void izmeniArtikl();
+    void obracunaj();
+
 };
 
 #endif // OTPRENICE
