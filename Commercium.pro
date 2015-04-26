@@ -18,7 +18,7 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h \
     artikl.h \
     komitent.h \
-    kakulacije.h \
+    kakulacija.h \
     kepu.h \
     otprenica.h \
     prijemnica.h \
