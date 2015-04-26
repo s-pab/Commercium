@@ -18,6 +18,10 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h \
     artikl.h \
     komitent.h \
-    kakulacije.h
+    kakulacije.h \
+    kepu.h \
+    otprenica.h \
+    prijemnica.h \
+    trebovanje.h
 
 FORMS    += commercium.ui
