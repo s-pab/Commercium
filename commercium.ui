@@ -56,7 +56,7 @@
    </widget>
    <widget class="QMenu" name="menuKomintenti">
     <property name="title">
-     <string>Komintenti</string>
+     <string>Komitent</string>
     </property>
     <addaction name="actionDodaj"/>
     <addaction name="actionIzmeni_2"/>
@@ -211,6 +211,10 @@
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionNova">
+   <property name="icon">
+    <iconset>
+     <normaloff>../CurveDraw/Images/new.png</normaloff>../CurveDraw/Images/new.png</iconset>
+   </property>
    <property name="text">
     <string>Nova</string>
    </property>
@@ -219,6 +223,10 @@
    </property>
   </action>
   <action name="actionOtvori">
+   <property name="icon">
+    <iconset>
+     <normaloff>../CurveDraw/Images/open.png</normaloff>../CurveDraw/Images/open.png</iconset>
+   </property>
    <property name="text">
     <string>Otvori</string>
    </property>
@@ -227,6 +235,10 @@
    </property>
   </action>
   <action name="actionSnimi">
+   <property name="icon">
+    <iconset>
+     <normaloff>../CurveDraw/Images/save.png</normaloff>../CurveDraw/Images/save.png</iconset>
+   </property>
    <property name="text">
     <string>Snimi</string>
    </property>

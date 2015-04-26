@@ -16,6 +16,10 @@ SOURCES += main.cpp\
         mainwindow.cpp
 
 HEADERS  += mainwindow.h \
+<<<<<<< HEAD
     artikli.h
+=======
+    Komitent.h
+>>>>>>> origin/master
 
 FORMS    += commercium.ui
