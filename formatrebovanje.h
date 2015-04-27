@@ -1,9 +1,9 @@
-#ifndef FORMATREBOVANJE
-#define FORMATREBOVANJE
+#ifndef FORMATREBOVANJE_H
+#define FORMATREBOVANJE_H
 
 #include <QMainWindow>
 
-namespace Uii {
+namespace Ui {
 class FormaTrebovanje;
 }
 
@@ -16,8 +16,7 @@ public:
     ~FormaTrebovanje();
 
 private:
-    Uii::FormaTrebovanje *uii;
+    Ui::FormaTrebovanje *ui;
 };
 
-#endif // FORMATREBOVANJE
-
+#endif // FORMATREBOVANJE_H

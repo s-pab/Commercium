@@ -3,12 +3,12 @@
 
 FormaTrebovanje::FormaTrebovanje(QWidget *parent) :
     QMainWindow(parent),
-    uii(new Uii::FormaTrebovanje)
+    ui(new Ui::FormaTrebovanje)
 {
-    uii->setupUi(this);
+    ui->setupUi(this);
 }
 
 FormaTrebovanje::~FormaTrebovanje()
 {
-    delete uii;
+    delete ui;
 }
