@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui widgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -15,7 +15,6 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     formakalkulacije.cpp \
-    test.cpp \
     formatrebovanje.cpp \
     formaprijemnica.cpp \
     formaotpremnica.cpp
@@ -32,14 +31,12 @@ HEADERS  += mainwindow.h \
     knjigaedi.h \
     formakalkulacije.h \
     otpremnica.h \
-    test.h \
     formatrebovanje.h \
     formaprijemnica.h \
     formaotpremnica.h
 
 FORMS    += commercium.ui \
     formakalkulacije.ui \
-    test.ui \
     formatrebovanje.ui \
     formaprijemnica.ui \
     formaotpremnica.ui

@@ -13,7 +13,30 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <widget class="QMdiArea" name="mdiArea">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>200</width>
+      <height>160</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
@@ -67,88 +90,16 @@
     <property name="title">
      <string>Dokumenta</string>
     </property>
-    <widget class="QMenu" name="menuKalkulacije">
-     <property name="title">
-      <string>Kalkulacije</string>
-     </property>
-     <addaction name="actionNova_2"/>
-     <addaction name="actionIzmeni_4"/>
-     <addaction name="actionObri_i_4"/>
-    </widget>
-    <widget class="QMenu" name="menuProfakture">
-     <property name="title">
-      <string>Profakture</string>
-     </property>
-     <addaction name="actionNova_3"/>
-     <addaction name="actionIzmeni_5"/>
-     <addaction name="actionObri_i_5"/>
-    </widget>
-    <widget class="QMenu" name="menuFakture">
-     <property name="title">
-      <string>Fakture</string>
-     </property>
-     <addaction name="actionNova_4"/>
-     <addaction name="actionIzmeni_6"/>
-     <addaction name="actionObri_i_6"/>
-    </widget>
-    <widget class="QMenu" name="menuNivelacije">
-     <property name="title">
-      <string>Nivelacije</string>
-     </property>
-     <addaction name="actionNova_5"/>
-     <addaction name="actionIzmeni_8"/>
-     <addaction name="actionObri_i_8"/>
-    </widget>
-    <widget class="QMenu" name="menuPrijemnice">
-     <property name="title">
-      <string>Prijemnice</string>
-     </property>
-     <addaction name="actionNova_7"/>
-     <addaction name="actionIzmeni_10"/>
-     <addaction name="actionObri_i_10"/>
-    </widget>
-    <widget class="QMenu" name="menuTrebovanje">
-     <property name="title">
-      <string>Trebovanje</string>
-     </property>
-     <addaction name="actionNova_8"/>
-     <addaction name="actionIzmeni_11"/>
-     <addaction name="actionObri_i_11"/>
-    </widget>
-    <widget class="QMenu" name="menuOtpremnice">
-     <property name="title">
-      <string>Otpremnice</string>
-     </property>
-     <addaction name="actionNova_9"/>
-     <addaction name="actionIzmeni_12"/>
-     <addaction name="actionObri_i_12"/>
-    </widget>
-    <widget class="QMenu" name="menuKnjiga_EDI">
-     <property name="title">
-      <string>Knjiga EDI</string>
-     </property>
-     <addaction name="actionNova_10"/>
-     <addaction name="actionIzmeni_13"/>
-     <addaction name="actionObri_i_13"/>
-    </widget>
-    <widget class="QMenu" name="menuKEPU">
-     <property name="title">
-      <string>KEPU</string>
-     </property>
-     <addaction name="actionNova_11"/>
-     <addaction name="actionIzmeni_14"/>
-     <addaction name="actionObri_i_14"/>
-    </widget>
-    <addaction name="menuKalkulacije"/>
-    <addaction name="menuProfakture"/>
-    <addaction name="menuFakture"/>
-    <addaction name="menuNivelacije"/>
-    <addaction name="menuPrijemnice"/>
+    <addaction name="actionKalkulacija"/>
+    <addaction name="actionNivelacije"/>
+    <addaction name="actionFaktura"/>
+    <addaction name="actionProfaktura"/>
+    <addaction name="actionOtpremnice"/>
+    <addaction name="actionPrijemnice"/>
+    <addaction name="actionTrebovanje"/>
     <addaction name="actionPopis"/>
-    <addaction name="menuTrebovanje"/>
-    <addaction name="menuOtpremnice"/>
-    <addaction name="menuKnjiga_EDI"/>
-    <addaction name="menuKEPU"/>
+    <addaction name="actionKnjiga_EDI"/>
+    <addaction name="actionKEPU"/>
    </widget>
    <widget class="QMenu" name="menuKorisni_materijal">
     <property name="title">
@@ -514,6 +465,51 @@
   <action name="actionPopis">
    <property name="text">
     <string>Popis</string>
+   </property>
+  </action>
+  <action name="actionKalkulacija">
+   <property name="text">
+    <string>Kalkulacija</string>
+   </property>
+  </action>
+  <action name="actionProfaktura">
+   <property name="text">
+    <string>Profaktura</string>
+   </property>
+  </action>
+  <action name="actionFaktura">
+   <property name="text">
+    <string>Faktura</string>
+   </property>
+  </action>
+  <action name="actionNivelacije">
+   <property name="text">
+    <string>Nivelacije</string>
+   </property>
+  </action>
+  <action name="actionPrijemnice">
+   <property name="text">
+    <string>Prijemnice</string>
+   </property>
+  </action>
+  <action name="actionTrebovanje">
+   <property name="text">
+    <string>Trebovanje</string>
+   </property>
+  </action>
+  <action name="actionOtpremnice">
+   <property name="text">
+    <string>Otpremnice</string>
+   </property>
+  </action>
+  <action name="actionKnjiga_EDI">
+   <property name="text">
+    <string>Knjiga EDI</string>
+   </property>
+  </action>
+  <action name="actionKEPU">
+   <property name="text">
+    <string>KEPU</string>
    </property>
   </action>
  </widget>

@@ -20,9 +20,7 @@ private slots:
 
     void on_actionNova_triggered();
 
-    void on_actionNova_2_triggered();
-
-    void on_actionNova_8_triggered();
+    void on_actionKalkulacija_triggered();
 
 private:
     Ui::MainWindow *ui;

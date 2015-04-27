@@ -9,6 +9,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    //ui->mdiArea = new QMdiArea;
+    setCentralWidget(ui->mdiArea);
 }
 
 MainWindow::~MainWindow()
@@ -28,14 +30,10 @@ void MainWindow::on_actionNova_triggered()
 {
 }
 
-void MainWindow::on_actionNova_2_triggered()
-{
-    FormaKalkulacije *fk = new FormaKalkulacije(this);
-    fk->show();
-}
 
-void MainWindow::on_actionNova_8_triggered()
+void MainWindow::on_actionKalkulacija_triggered()
 {
-    FormaTrebovanje *ft = new FormaTrebovanje(this);
-    ft->show();
+    FormaKalkulacije *fk = new FormaKalkulacije(ui->mdiArea);
+    ui->mdiArea->addSubWindow(fk);
+    fk->showMaximized();
 }
