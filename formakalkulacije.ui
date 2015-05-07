@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>773</width>
+    <height>576</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>773</width>
+    <height>576</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Kalkulacija</string>
@@ -195,7 +201,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>773</width>
      <height>21</height>
     </rect>
    </property>
