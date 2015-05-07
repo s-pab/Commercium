@@ -19,7 +19,8 @@ SOURCES += main.cpp\
     formaotpremnica.cpp \
     commercium.cpp \
     formafaktura.cpp \
-    formaprofaktura.cpp
+    formaprofaktura.cpp \
+    formalogovanja.cpp
 
 HEADERS  += \
     artikl.h \
@@ -38,7 +39,8 @@ HEADERS  += \
     formaotpremnica.h \
     commercium.h \
     formafaktura.h \
-    formaprofaktura.h
+    formaprofaktura.h \
+    formalogovanja.h
 
 FORMS    += commercium.ui \
     formakalkulacije.ui \
@@ -46,7 +48,8 @@ FORMS    += commercium.ui \
     formaprijemnica.ui \
     formaotpremnica.ui \
     formafaktura.ui \
-    formaprofaktura.ui
+    formaprofaktura.ui \
+    formalogovanja.ui
 
 RESOURCES += \
     slike.qrc

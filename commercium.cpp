@@ -6,6 +6,7 @@
 #include "formaotpremnica.h"
 #include "formaprijemnica.h"
 #include "formaprofaktura.h"
+#include "formalogovanja.h"
 #include "formafaktura.h"
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -32,6 +33,10 @@ void MainWindow::on_actionZatvori_triggered()
 
 void MainWindow::on_actionNova_triggered()
 {
+    FormaLogovanja *fl=new FormaLogovanja(ui->mdiArea);
+    ui->centralWidget;
+    fl->show();
+
 }
 
 
