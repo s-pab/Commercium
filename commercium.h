@@ -22,6 +22,16 @@ private slots:
 
     void on_actionKalkulacija_triggered();
 
+    void on_actionTrebovanje_triggered();
+
+    void on_actionPrijemnice_triggered();
+
+    void on_actionOtpremnice_triggered();
+
+    void on_actionFaktura_triggered();
+
+    void on_actionProfaktura_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
