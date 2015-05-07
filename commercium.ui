@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Commercium</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="slike.qrc">
+    <normaloff>:/Images/c32.jpg</normaloff>:/Images/c32.jpg</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="sizePolicy">
@@ -514,6 +518,8 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="slike.qrc"/>
+ </resources>
  <connections/>
 </ui>

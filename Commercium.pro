@@ -48,4 +48,5 @@ FORMS    += commercium.ui \
     formafaktura.ui \
     formaprofaktura.ui
 
-RESOURCES +=
+RESOURCES += \
+    slike.qrc
