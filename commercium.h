@@ -32,6 +32,8 @@ private slots:
 
     void on_actionProfaktura_triggered();
 
+    void on_actionNivelacije_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
