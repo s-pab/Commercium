@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="slike.qrc">
-    <normaloff>:/Images/c32.jpg</normaloff>:/Images/c32.jpg</iconset>
+    <normaloff>:/Images/c64.ico</normaloff>:/Images/c64.ico</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="sizePolicy">
