@@ -15,6 +15,9 @@ public:
     explicit FormaNivelacija(QWidget *parent = 0);
     ~FormaNivelacija();
 
+private slots:
+    void on_pushButton_3_clicked();
+
 private:
     Ui::FormaNivelacija *ui;
 };

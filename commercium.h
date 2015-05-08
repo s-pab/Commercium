@@ -34,6 +34,7 @@ private slots:
 
     void on_actionNivelacije_triggered();
 
+
 private:
     Ui::MainWindow *ui;
 };

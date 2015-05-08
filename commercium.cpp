@@ -9,6 +9,7 @@
 #include "formalogovanja.h"
 #include "formanivelacija.h"
 #include "formafaktura.h"
+#include <QString>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -35,7 +36,6 @@ void MainWindow::on_actionZatvori_triggered()
 void MainWindow::on_actionNova_triggered()
 {
     FormaLogovanja *fl=new FormaLogovanja(ui->mdiArea);
-
     fl->show();
 
 }
@@ -90,3 +90,5 @@ void MainWindow::on_actionNivelacije_triggered()
     ui->mdiArea->addSubWindow(fn);
     fn->showMaximized();
 }
+
+

@@ -15,6 +15,9 @@ public:
     explicit FormaOtpremnica(QWidget *parent = 0);
     ~FormaOtpremnica();
 
+private slots:
+    void on_pushButton_3_clicked();
+
 private:
     Ui::FormaOtpremnica *ui;
 };

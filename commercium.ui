@@ -117,11 +117,6 @@
      <addaction name="actionNalog_za_isplatu"/>
      <addaction name="actionNalog_za_prenos"/>
     </widget>
-    <widget class="QMenu" name="menuType_Here">
-     <property name="title">
-      <string>Type Here</string>
-     </property>
-    </widget>
     <widget class="QMenu" name="menuObavezna_dokumenta">
      <property name="title">
       <string>Obavezna dokumenta</string>
@@ -130,7 +125,6 @@
     </widget>
     <addaction name="menuNalozi"/>
     <addaction name="menuObavezna_dokumenta"/>
-    <addaction name="menuType_Here"/>
    </widget>
    <widget class="QMenu" name="menuO_nama">
     <property name="title">

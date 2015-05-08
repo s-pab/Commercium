@@ -15,6 +15,9 @@ public:
     explicit FormaPrijemnica(QWidget *parent = 0);
     ~FormaPrijemnica();
 
+private slots:
+    void on_pushButton_3_clicked();
+
 private:
     Ui::FormaPrijemnica *ui;
 };

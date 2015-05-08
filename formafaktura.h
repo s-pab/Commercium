@@ -15,6 +15,9 @@ public:
     explicit FormaFaktura(QWidget *parent = 0);
     ~FormaFaktura();
 
+private slots:
+    void on_pushButton_3_clicked();
+
 private:
     Ui::FormaFaktura *ui;
 };

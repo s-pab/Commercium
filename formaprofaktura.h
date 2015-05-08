@@ -15,6 +15,9 @@ public:
     explicit FormaProfaktura(QWidget *parent = 0);
     ~FormaProfaktura();
 
+private slots:
+    void on_pushButton_6_clicked();
+
 private:
     Ui::FormaProfaktura *ui;
 };

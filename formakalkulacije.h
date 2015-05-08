@@ -15,6 +15,9 @@ public:
     explicit FormaKalkulacije(QWidget *parent = 0);
     ~FormaKalkulacije();
 
+private slots:
+    void on_pushButton_3_clicked();
+
 private:
     Ui::FormaKalkulacije *ui;
 };

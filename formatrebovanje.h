@@ -15,6 +15,9 @@ public:
     explicit FormaTrebovanje(QWidget *parent = 0);
     ~FormaTrebovanje();
 
+private slots:
+    void on_pushButton_3_clicked();
+
 private:
     Ui::FormaTrebovanje *ui;
 };
