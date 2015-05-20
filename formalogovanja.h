@@ -1,22 +1,19 @@
 #ifndef FORMALOGOVANJA_H
 #define FORMALOGOVANJA_H
 
-#include <QMainWindow>
+#include <QDialog>
 
 namespace Ui {
 class FormaLogovanja;
 }
 
-class FormaLogovanja : public QMainWindow
+class FormaLogovanja : public QDialog
 {
     Q_OBJECT
 
 public:
     explicit FormaLogovanja(QWidget *parent = 0);
     ~FormaLogovanja();
-
-private slots:
-    void on_Otkazi_clicked();
 
 private:
     Ui::FormaLogovanja *ui;

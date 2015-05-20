@@ -54,21 +54,10 @@
     <property name="title">
      <string>Firma</string>
     </property>
-    <widget class="QMenu" name="menuSkladi_ta">
-     <property name="title">
-      <string>Skladišta</string>
-     </property>
-     <addaction name="actionNovo"/>
-     <addaction name="actionIzmeni_7"/>
-     <addaction name="actionObri_i_7"/>
-     <addaction name="actionPrika_i_2"/>
-    </widget>
     <addaction name="actionNova"/>
     <addaction name="actionOtvori"/>
-    <addaction name="actionSnimi"/>
     <addaction name="actionObri_i_2"/>
     <addaction name="actionIzmeni_3"/>
-    <addaction name="menuSkladi_ta"/>
     <addaction name="actionZatvori"/>
    </widget>
    <widget class="QMenu" name="menuArtikli">
