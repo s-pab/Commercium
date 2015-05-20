@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
     {
         w.showMaximized();
     }
+    exit(0);
 
     return a.exec();
 }

@@ -49,6 +49,7 @@ void MainWindow::connectToDatabase()
         if(!db.open())
         {
             QMessageBox::critical(this, "Commercium", "Greska pri otvaranju baze podataka!", QMessageBox::Abort, QMessageBox::NoButton);
+            db.close();
             emit close();
             return;
         }

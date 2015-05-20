@@ -2,6 +2,8 @@
 #include "ui_formalogovanja.h"
 #include <QMessageBox>
 #include <QFileDialog>
+#include <QSqlRecord>
+#include <QDebug>
 
 FormaLogovanja::FormaLogovanja(QWidget *parent) :
     QDialog(parent),
@@ -17,21 +19,17 @@ FormaLogovanja::~FormaLogovanja()
 
 void FormaLogovanja::connect()
 {
-    QSqlDatabase db = QSqlDatabase::addDatabase("QODBC");
+    db = QSqlDatabase::addDatabase("QODBC");
     QString path = qApp->applicationDirPath();
     QString conn = "DRIVER={Microsoft Access Driver (*.mdb)};DefaultDir=" + path + ";DBQ=korisnici.mdb";
     db.setDatabaseName(conn);
     if(!db.open())
     {
-        QString dbFilename = QFileDialog::getOpenFileName(this, "Izbor baze podataka", path, "MS Access Database (*.mdb);;All Files (*.*)");
-        db.setDatabaseName("DRIVER={Microsoft Access Driver (*.mdb)};DBQ=" + dbFilename);
-        if(!db.open())
-        {
-            QMessageBox::critical(this, "Commercium", "Greska pri otvaranju baze podataka!", QMessageBox::Abort, QMessageBox::NoButton);
-            emit close();
-            return;
-        }
+         QMessageBox::critical(this, "Commercium", "Greska pri otvaranju baze podataka!", QMessageBox::Abort, QMessageBox::NoButton);
+         emit close();
+         return;
     }
+
 }
 
 void FormaLogovanja::on_bPrijava_clicked()
@@ -41,8 +39,7 @@ void FormaLogovanja::on_bPrijava_clicked()
     QString password=ui->leLozinka->text();
     QSqlQuery qry;
     qry.exec("select * from Korisnici where korisnickoIme='"+username+"' and lozinka='"+password+"'");
-
-    if(!qry.next())
+    if(qry.next())
         emit accept();
     else
     {
@@ -52,6 +49,8 @@ void FormaLogovanja::on_bPrijava_clicked()
         msg.addButton(QMessageBox::Ok);
         msg.setButtonText(QMessageBox::Ok,"Probaj ponovo");
         msg.exec();
+        ui->leKorisnicko->clear();
+        ui->leLozinka->clear();
     }
-
+    db.close();
 }
