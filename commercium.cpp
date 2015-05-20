@@ -133,13 +133,26 @@ void MainWindow::on_actionUvezi_triggered()
     if(!filePath.isEmpty())
     {
         QFile file(filePath);
-        file.open(QIODevice::ReadOnly | QIODevice::Text);
-        QTextStream in(&file);
-        QSqlQuery query;
-        while(true)
+        QRegExp sep("[;]");
+        if(file.open(QIODevice::ReadOnly))
         {
-            in<<file.readLine();
-            query.prepare("INSERT INTO ");
+            QTextStream in(&file);
+            QSqlQuery query;
+            QString red = in.readLine();
+            QStringList lista = red.split(sep);
+            while(!in.atEnd())
+            {
+                red = in.readLine();
+                lista = red.split(sep);
+                query.prepare("INSERT INTO Artikl (sifraProizvoda,nazivProizvoda,jedinicaMere,nabavnaCena,kategorijaPDV,marza,rabat,prodajnaCena,kolicina) VALUES (:SIFRA,:NAZIV,:JEDMER,:NABAVNA,:KATEGORIJA,'0,00','0,00','0,00','0,00')");
+                query.bindValue(":SIFRA",lista[0].toInt());
+                query.bindValue(":NAZIV",lista[1]);
+                query.bindValue(":JEDMER","kom");
+                query.bindValue(":NABAVNA",lista[4].toDouble());
+                query.bindValue(":KATEGORIJA",lista[2].toInt());
+
+                query.exec();
+           }
         }
         file.close();
     }
