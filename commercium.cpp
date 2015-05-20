@@ -9,6 +9,7 @@
 #include "formalogovanja.h"
 #include "formanivelacija.h"
 #include "formafaktura.h"
+#include <QLabel>
 #include <QString>
 
 #include <QSqlDatabase>
@@ -156,4 +157,13 @@ void MainWindow::on_actionUvezi_triggered()
         }
         file.close();
     }
+}
+
+void MainWindow::on_actionO_nama_triggered()
+{
+    //ui->setupUi(this);
+    QLabel *image = new QLabel();
+       image->setPixmap( QPixmap( ":/Images/SPABTeam.png" ) );
+       image->showMaximized();
+      // show();
 }

@@ -11,9 +11,13 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Logovanje</string>
   </property>
-  <widget class="QWidget" name="">
+  <property name="windowIcon">
+   <iconset resource="slike.qrc">
+    <normaloff>:/Images/commercium.ico</normaloff>:/Images/commercium.ico</iconset>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -138,7 +142,9 @@
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="slike.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>bOtkazi</sender>

@@ -39,6 +39,8 @@ private slots:
 
     void connectToDatabase();
 
+    void on_actionO_nama_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

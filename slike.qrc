@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>Images/commercium.ico</file>
+        <file>Images/SPABTeam.png</file>
     </qresource>
 </RCC>
