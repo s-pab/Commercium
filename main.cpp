@@ -5,10 +5,10 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    FormaLogovanja w;
-    w.show();
-   // MainWindow w;
-    //w.showMaximized();
+    FormaLogovanja f;
+    MainWindow w;
+    if(f.exec()==QDialog::Accepted)
+        w.showMaximized();
     //w.show();
 
     return a.exec();
