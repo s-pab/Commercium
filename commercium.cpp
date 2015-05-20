@@ -11,6 +11,19 @@
 #include "formafaktura.h"
 #include <QString>
 
+#include <QSqlDatabase>
+#include <QSqlQuery>
+#include <QSqlQueryModel>
+
+#include <QFile>
+#include <QCoreApplication>
+#include <QTextStream>
+#include <QMessageBox>
+#include <QFileDialog>
+#include <QTimer>
+
+#include <QDateTime>
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -18,6 +31,27 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     //ui->mdiArea = new QMdiArea;
     setCentralWidget(ui->mdiArea);
+    QTimer::singleShot(0, this, SLOT(connectToDatabase()));
+}
+
+void MainWindow::connectToDatabase()
+{
+    // Konektovanje na bazu
+    QSqlDatabase db = QSqlDatabase::addDatabase("QODBC");
+    QString path = qApp->applicationDirPath();
+    QString conn = "DRIVER={Microsoft Access Driver (*.mdb)};DefaultDir=" + path + ";DBQ=Commercium.mdb";
+    db.setDatabaseName(conn);
+    if(!db.open())
+    {
+        QString dbFilename = QFileDialog::getOpenFileName(this, "Izbor baze podataka", path, "MS Access Database (*.mdb);;All Files (*.*)");
+        db.setDatabaseName("DRIVER={Microsoft Access Driver (*.mdb)};DBQ=" + dbFilename);
+        if(!db.open())
+        {
+            QMessageBox::critical(this, "Commercium", "Greska pri otvaranju baze podataka!", QMessageBox::Abort, QMessageBox::NoButton);
+            emit close();
+            return;
+        }
+    }
 }
 
 MainWindow::~MainWindow()
@@ -92,3 +126,21 @@ void MainWindow::on_actionNivelacije_triggered()
 }
 
 
+
+void MainWindow::on_actionUvezi_triggered()
+{
+    QString filePath = QFileDialog::getOpenFileName(this, QString(), QString(), "Comma separated value (*.csv);;All Files (*.*)");
+    if(!filePath.isEmpty())
+    {
+        QFile file(filePath);
+        file.open(QIODevice::ReadOnly | QIODevice::Text);
+        QTextStream in(&file);
+        QSqlQuery query;
+        while(true)
+        {
+            in<<file.readLine();
+            query.prepare("INSERT INTO ");
+        }
+        file.close();
+    }
+}

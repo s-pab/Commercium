@@ -35,6 +35,10 @@ private slots:
     void on_actionNivelacije_triggered();
 
 
+    void on_actionUvezi_triggered();
+
+    void connectToDatabase();
+
 private:
     Ui::MainWindow *ui;
 };
