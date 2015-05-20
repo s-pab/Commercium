@@ -18,7 +18,7 @@
     <rect>
      <x>0</x>
      <y>10</y>
-     <width>261</width>
+     <width>262</width>
      <height>131</height>
     </rect>
    </property>
@@ -48,7 +48,7 @@
          </spacer>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit"/>
+         <widget class="QLineEdit" name="leKorisnicko"/>
         </item>
        </layout>
       </item>
@@ -71,14 +71,18 @@
           </property>
           <property name="sizeHint" stdset="0">
            <size>
-            <width>59</width>
+            <width>72</width>
             <height>20</height>
            </size>
           </property>
          </spacer>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_2"/>
+         <widget class="QLineEdit" name="leLozinka">
+          <property name="echoMode">
+           <enum>QLineEdit::Password</enum>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -136,22 +140,6 @@
  </widget>
  <resources/>
  <connections>
-  <connection>
-   <sender>bPrijava</sender>
-   <signal>clicked()</signal>
-   <receiver>FormaLogovanja</receiver>
-   <slot>accept()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>140</x>
-     <y>127</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>132</x>
-     <y>74</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>bOtkazi</sender>
    <signal>clicked()</signal>

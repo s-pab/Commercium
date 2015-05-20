@@ -1,5 +1,7 @@
 #include "formalogovanja.h"
 #include "ui_formalogovanja.h"
+#include <QMessageBox>
+#include <QFileDialog>
 
 FormaLogovanja::FormaLogovanja(QWidget *parent) :
     QDialog(parent),
@@ -11,4 +13,45 @@ FormaLogovanja::FormaLogovanja(QWidget *parent) :
 FormaLogovanja::~FormaLogovanja()
 {
     delete ui;
+}
+
+void FormaLogovanja::connect()
+{
+    QSqlDatabase db = QSqlDatabase::addDatabase("QODBC");
+    QString path = qApp->applicationDirPath();
+    QString conn = "DRIVER={Microsoft Access Driver (*.mdb)};DefaultDir=" + path + ";DBQ=korisnici.mdb";
+    db.setDatabaseName(conn);
+    if(!db.open())
+    {
+        QString dbFilename = QFileDialog::getOpenFileName(this, "Izbor baze podataka", path, "MS Access Database (*.mdb);;All Files (*.*)");
+        db.setDatabaseName("DRIVER={Microsoft Access Driver (*.mdb)};DBQ=" + dbFilename);
+        if(!db.open())
+        {
+            QMessageBox::critical(this, "Commercium", "Greska pri otvaranju baze podataka!", QMessageBox::Abort, QMessageBox::NoButton);
+            emit close();
+            return;
+        }
+    }
+}
+
+void FormaLogovanja::on_bPrijava_clicked()
+{
+    connect();
+    QString username=ui->leKorisnicko->text();
+    QString password=ui->leLozinka->text();
+    QSqlQuery qry;
+    qry.exec("select * from Korisnici where korisnickoIme='"+username+"' and lozinka='"+password+"'");
+
+    if(!qry.next())
+        emit accept();
+    else
+    {
+        QMessageBox msg;
+        msg.setText("Pogresno korisnicko ime ili lozinka");
+        msg.setWindowTitle("Greska");
+        msg.addButton(QMessageBox::Ok);
+        msg.setButtonText(QMessageBox::Ok,"Probaj ponovo");
+        msg.exec();
+    }
+
 }
