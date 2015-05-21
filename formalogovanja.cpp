@@ -2,6 +2,8 @@
 #include "ui_formalogovanja.h"
 #include <QMessageBox>
 #include <QFileDialog>
+#include <QDebug>
+#include <QSqlError>
 
 FormaLogovanja::FormaLogovanja(QWidget *parent) :
     QDialog(parent),
@@ -25,6 +27,7 @@ void FormaLogovanja::connect()
     db.setPassword("commercium.trgovina");
     if(!db.open())
     {
+        qDebug()<<db.lastError();
          QMessageBox::critical(this, "Commercium", "Greska pri otvaranju baze podataka!", QMessageBox::Abort, QMessageBox::NoButton);
          emit close();
          return;
