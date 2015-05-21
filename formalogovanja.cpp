@@ -10,6 +10,8 @@ FormaLogovanja::FormaLogovanja(QWidget *parent) :
     ui(new Ui::FormaLogovanja)
 {
     ui->setupUi(this);
+    connect();
+    setLayout(ui->verticalLayout_2);
 }
 
 FormaLogovanja::~FormaLogovanja()
@@ -36,7 +38,7 @@ void FormaLogovanja::connect()
 
 void FormaLogovanja::on_bPrijava_clicked()
 {
-    connect();
+
     QString username=ui->leKorisnicko->text();
     QString password=ui->leLozinka->text();
     QSqlQuery qry;
