@@ -2,8 +2,6 @@
 #include "ui_formalogovanja.h"
 #include <QMessageBox>
 #include <QFileDialog>
-#include <QSqlRecord>
-#include <QDebug>
 
 FormaLogovanja::FormaLogovanja(QWidget *parent) :
     QDialog(parent),
@@ -22,14 +20,15 @@ void FormaLogovanja::connect()
     db = QSqlDatabase::addDatabase("QODBC");
     QString path = qApp->applicationDirPath();
     QString conn = "DRIVER={Microsoft Access Driver (*.mdb)};DefaultDir=" + path + ";DBQ=korisnici.mdb";
+    //db.setDatabaseName ("DRIVER = {Microsoft Access Driver (*. mdb)}; FIL = {MS Access}; DBQ = korisnici.mdb");
     db.setDatabaseName(conn);
+    db.setPassword("commercium.trgovina");
     if(!db.open())
     {
          QMessageBox::critical(this, "Commercium", "Greska pri otvaranju baze podataka!", QMessageBox::Abort, QMessageBox::NoButton);
          emit close();
          return;
     }
-
 }
 
 void FormaLogovanja::on_bPrijava_clicked()
