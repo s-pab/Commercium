@@ -3,6 +3,7 @@
 #include <QString>
 #include <QFile>
 #include <QTextStream>
+#include <QPainter>
 
 FormaNalogUplata::FormaNalogUplata(QWidget *parent) :
     QMainWindow(parent),
@@ -22,7 +23,7 @@ void FormaNalogUplata::on_pushButton_clicked()
 }
 void FormaNalogUplata::writeuplata()
 {
-    QString uplatilac=ui->label->text()+" - "+ui->lineEdit->text();
+    /*QString uplatilac=ui->label->text()+" - "+ui->lineEdit->text();
     QString svrha=ui->label_2->text()+" - "+ui->lineEdit_4->text();
     QString primalac=ui->label_3->text()+" - "+ui->lineEdit_7->text();
     QString sifra=ui->label_8->text()+" "+ui->label_14->text()+" "+ui->lineEdit_2->text();
@@ -44,4 +45,10 @@ void FormaNalogUplata::writeuplata()
     out<<racun<<endl;
     out<<poziv<<endl;
     file.close();
+    QImage uplatnica("qrc:/Images/uplatnica.jpg");
+    QPainter upis(&uplatnica);
+    upis.setPen(Qt::black);
+    upis.setBrush(QBrush(Qt::black));
+    upis.setFont(QFont("Arial",12));*/
+    ui->centralwidget->grab(QRect(QPoint(0,0),QPoint(640,290))).save("uplat.jpg");
 }
