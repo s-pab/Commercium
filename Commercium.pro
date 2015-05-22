@@ -21,7 +21,8 @@ SOURCES += main.cpp\
     formafaktura.cpp \
     formaprofaktura.cpp \
     formalogovanja.cpp \
-    formanivelacija.cpp
+    formanivelacija.cpp \
+    formanaloguplata.cpp
 
 HEADERS  += \
     artikl.h \
@@ -42,7 +43,8 @@ HEADERS  += \
     formafaktura.h \
     formaprofaktura.h \
     formalogovanja.h \
-    formanivelacija.h
+    formanivelacija.h \
+    formanaloguplata.h
 
 FORMS    += commercium.ui \
     formakalkulacije.ui \
@@ -52,7 +54,8 @@ FORMS    += commercium.ui \
     formafaktura.ui \
     formaprofaktura.ui \
     formalogovanja.ui \
-    formanivelacija.ui
+    formanivelacija.ui \
+    formanaloguplata.ui
 
 RESOURCES += \
     slike.qrc

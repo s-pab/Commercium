@@ -9,6 +9,7 @@
 #include "formalogovanja.h"
 #include "formanivelacija.h"
 #include "formafaktura.h"
+#include "formanaloguplata.h"
 #include <QLabel>
 #include <QString>
 
@@ -167,4 +168,12 @@ void MainWindow::on_actionO_nama_triggered()
        image->setPixmap( QPixmap( ":/Images/SPABTeam.png" ) );
        image->showMaximized();
       // show();
+}
+
+void MainWindow::on_action_ablon_uplatnice_triggered()
+{
+    FormaNalogUplata *fnl=new FormaNalogUplata(ui->mdiArea);
+    ui->mdiArea->addSubWindow(fnl);
+    fnl->showMaximized();
+
 }

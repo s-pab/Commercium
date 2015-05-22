@@ -41,6 +41,8 @@ private slots:
 
     void on_actionO_nama_triggered();
 
+    void on_action_ablon_uplatnice_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
