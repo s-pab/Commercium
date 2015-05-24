@@ -50,5 +50,18 @@ void FormaNalogUplata::writeuplata()
     upis.setPen(Qt::black);
     upis.setBrush(QBrush(Qt::black));
     upis.setFont(QFont("Arial",12));*/
-    ui->centralwidget->grab(QRect(QPoint(0,0),QPoint(640,290))).save("uplat.jpg");
+    ui->centralwidget->grab(QRect(QPoint(0,0),QPoint(640,270))).save("uplatnica.jpg");
+}
+
+void FormaNalogUplata::on_pushButton_2_clicked()
+{
+    ui->lineEdit->clear();
+    ui->lineEdit_2->clear();
+    ui->lineEdit_3->clear();
+    ui->lineEdit_4->clear();
+    ui->lineEdit_5->clear();
+    ui->lineEdit_6->clear();
+    ui->lineEdit_7->clear();
+    ui->lineEdit_8->clear();
+    ui->lineEdit_9->clear();
 }

@@ -231,7 +231,7 @@
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>130</x>
       <y>239</y>
       <width>121</width>
       <height>31</height>
@@ -335,14 +335,27 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>290</y>
+      <x>170</x>
+      <y>280</y>
       <width>101</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
      <string>Snimi uplatnicu</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>280</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Očisti</string>
     </property>
    </widget>
   </widget>
