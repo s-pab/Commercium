@@ -43,13 +43,12 @@ private slots:
 
     void on_action_ablon_uplatnice_triggered();
 
-<<<<<<< HEAD
     void on_actionPopis_triggered();
-=======
+
     void on_actionNalog_za_isplatu_triggered();
 
     void on_actionNalog_za_prenos_triggered();
->>>>>>> origin/master
+
 
 private:
     Ui::MainWindow *ui;

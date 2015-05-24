@@ -23,12 +23,9 @@ SOURCES += main.cpp\
     formalogovanja.cpp \
     formanivelacija.cpp \
     formanaloguplata.cpp \
-<<<<<<< HEAD
-    formapopis.cpp
-=======
+    formapopis.cpp \
     formanalogisplata.cpp \
     formanalogprenos.cpp
->>>>>>> origin/master
 
 HEADERS  += \
     artikl.h \
@@ -51,12 +48,9 @@ HEADERS  += \
     formalogovanja.h \
     formanivelacija.h \
     formanaloguplata.h \
-<<<<<<< HEAD
-    formapopis.h
-=======
+    formapopis.h \
     formanalogisplata.h \
     formanalogprenos.h
->>>>>>> origin/master
 
 FORMS    += commercium.ui \
     formakalkulacije.ui \
@@ -68,12 +62,9 @@ FORMS    += commercium.ui \
     formalogovanja.ui \
     formanivelacija.ui \
     formanaloguplata.ui \
-<<<<<<< HEAD
-    formapopis.ui
-=======
+    formapopis.ui \
     formanalogisplata.ui \
     formanalogprenos.ui
->>>>>>> origin/master
 
 RESOURCES += \
     slike.qrc
