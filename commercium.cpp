@@ -10,6 +10,7 @@
 #include "formanivelacija.h"
 #include "formafaktura.h"
 #include "formanaloguplata.h"
+#include "formapopis.h"
 #include <QLabel>
 #include <QString>
 
@@ -176,4 +177,11 @@ void MainWindow::on_action_ablon_uplatnice_triggered()
     ui->mdiArea->addSubWindow(fnl);
     fnl->showMaximized();
 
+}
+
+void MainWindow::on_actionPopis_triggered()
+{
+    FormaPopis *fp = new FormaPopis(ui->mdiArea);
+    ui->mdiArea->addSubWindow(fp);
+    fp->showMaximized();
 }

@@ -43,6 +43,8 @@ private slots:
 
     void on_action_ablon_uplatnice_triggered();
 
+    void on_actionPopis_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
