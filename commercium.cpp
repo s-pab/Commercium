@@ -10,6 +10,8 @@
 #include "formanivelacija.h"
 #include "formafaktura.h"
 #include "formanaloguplata.h"
+#include "formanalogisplata.h"
+#include "formanalogprenos.h"
 #include <QLabel>
 #include <QString>
 
@@ -176,4 +178,18 @@ void MainWindow::on_action_ablon_uplatnice_triggered()
     ui->mdiArea->addSubWindow(fnl);
     fnl->showMaximized();
 
+}
+
+void MainWindow::on_actionNalog_za_isplatu_triggered()
+{
+    FormaNalogIsplata *fni=new FormaNalogIsplata(ui->mdiArea);
+    ui->mdiArea->addSubWindow(fni);
+    fni->showMaximized();
+}
+
+void MainWindow::on_actionNalog_za_prenos_triggered()
+{
+    FormaNalogPrenos *fnp=new FormaNalogPrenos(ui->mdiArea);
+    ui->mdiArea->addSubWindow(fnp);
+    fnp->showMaximized();
 }

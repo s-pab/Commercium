@@ -43,6 +43,10 @@ private slots:
 
     void on_action_ablon_uplatnice_triggered();
 
+    void on_actionNalog_za_isplatu_triggered();
+
+    void on_actionNalog_za_prenos_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
