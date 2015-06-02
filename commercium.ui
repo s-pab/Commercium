@@ -17,6 +17,9 @@
    <iconset resource="slike.qrc">
     <normaloff>:/Images/commercium.ico</normaloff>:/Images/commercium.ico</iconset>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <property name="sizePolicy">
     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
@@ -25,6 +28,9 @@
     </sizepolicy>
    </property>
    <widget class="QMdiArea" name="mdiArea">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>-211</x>
@@ -38,6 +44,25 @@
       <horstretch>0</horstretch>
       <verstretch>0</verstretch>
      </sizepolicy>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(160, 160, 160);
+border-image: url(:/Images/bg.png);</string>
+    </property>
+    <property name="background">
+     <brush brushstyle="NoBrush">
+      <color alpha="255">
+       <red>160</red>
+       <green>160</green>
+       <blue>160</blue>
+      </color>
+     </brush>
+    </property>
+    <property name="activationOrder">
+     <enum>QMdiArea::CreationOrder</enum>
+    </property>
+    <property name="documentMode">
+     <bool>false</bool>
     </property>
    </widget>
   </widget>
