@@ -111,6 +111,9 @@
       <string>Obavezna dokumenta</string>
      </property>
      <addaction name="actionUzimite_ra_un"/>
+     <addaction name="actionZabranjeno_pu_enje"/>
+     <addaction name="actionZabrana_prodaje_cigareta_osobama_ispod_18_godina"/>
+     <addaction name="actionZabrana_prodaje_alkohola_osobama_ispod_18_godina"/>
     </widget>
     <addaction name="menuNalozi"/>
     <addaction name="menuObavezna_dokumenta"/>
@@ -327,6 +330,21 @@
   <action name="actionKEPU">
    <property name="text">
     <string>KEPU</string>
+   </property>
+  </action>
+  <action name="actionZabranjeno_pu_enje">
+   <property name="text">
+    <string>Zabranjeno pušenje</string>
+   </property>
+  </action>
+  <action name="actionZabrana_prodaje_cigareta_osobama_ispod_18_godina">
+   <property name="text">
+    <string>Zabrana prodaje cigareta osobama ispod 18 godina</string>
+   </property>
+  </action>
+  <action name="actionZabrana_prodaje_alkohola_osobama_ispod_18_godina">
+   <property name="text">
+    <string>Zabrana prodaje alkohola osobama ispod 18 godina</string>
    </property>
   </action>
  </widget>

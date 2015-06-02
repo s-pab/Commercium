@@ -200,3 +200,43 @@ void MainWindow::on_actionNalog_za_prenos_triggered()
     ui->mdiArea->addSubWindow(fnp);
     fnp->showMaximized();
 }
+
+void MainWindow::on_actionZabranjeno_pu_enje_triggered()
+{
+       QLabel *image = new QLabel();
+       image->setPixmap(QPixmap( ":/Images/zabranjeno pusenje.jpg"));
+       QString imagePath = QFileDialog::getSaveFileName(this,tr("Sačuvajte nalepnicu zabranjeno pušenje!"),"",tr("JPEG (*.jpg *.jpeg);;PNG (*.png)" ));
+       QPixmap imageObject = image->grab(QRect(QPoint(5,0),QPoint(365,510)));
+       imageObject.save(imagePath);
+       image->show();
+}
+
+void MainWindow::on_actionUzimite_ra_un_triggered()
+{
+    QLabel *image = new QLabel();
+    image->setPixmap(QPixmap( ":/Images/uzmite-racun.jpg"));
+    QString imagePath = QFileDialog::getSaveFileName(this,tr("Sačuvajte nalepnicu uzmite račun!"),"",tr("JPEG (*.jpg *.jpeg);;PNG (*.png)" ));
+    QPixmap imageObject = image->grab(QRect(QPoint(280,0),QPoint(720,480)));
+    imageObject.save(imagePath);
+    image->showMaximized();
+}
+
+void MainWindow::on_actionZabrana_prodaje_cigareta_osobama_ispod_18_godina_triggered()
+{
+    QLabel *image = new QLabel();
+    image->setPixmap(QPixmap( ":/Images/cigarete ispod 18.jpg"));
+    QString imagePath = QFileDialog::getSaveFileName(this,tr("Sačuvajte nalepnicu zabrana prodaje cigareta osobama ispod 18 godina!"),"",tr("JPEG (*.jpg *.jpeg);;PNG (*.png)" ));
+    QPixmap imageObject = image->grab(QRect(QPoint(0,75),QPoint(230,370)));
+    imageObject.save(imagePath);
+    image->show();
+}
+
+void MainWindow::on_actionZabrana_prodaje_alkohola_osobama_ispod_18_godina_triggered()
+{
+    QLabel *image = new QLabel();
+    image->setPixmap(QPixmap( ":/Images/zabrana alkohola.jpg"));
+    QString imagePath = QFileDialog::getSaveFileName(this,tr("Sačuvajte nalepnicu zabrana prodaje alkoholnih pića osobama ispod 18 godina!"),"",tr("JPEG (*.jpg *.jpeg);;PNG (*.png)" ));
+    QPixmap imageObject = image->grab(QRect(QPoint(80,0),QPoint(440,510)));
+    imageObject.save(imagePath);
+    image->show();
+}

@@ -2,5 +2,9 @@
     <qresource prefix="/">
         <file>Images/commercium.ico</file>
         <file>Images/SPABTeam.png</file>
+        <file>Images/zabranjeno pusenje.jpg</file>
+        <file>Images/cigarete ispod 18.jpg</file>
+        <file>Images/zabrana alkohola.jpg</file>
+        <file>Images/uzmite-racun.jpg</file>
     </qresource>
 </RCC>

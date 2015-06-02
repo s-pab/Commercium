@@ -50,6 +50,14 @@ private slots:
     void on_actionNalog_za_prenos_triggered();
 
 
+    void on_actionZabranjeno_pu_enje_triggered();
+
+    void on_actionUzimite_ra_un_triggered();
+
+    void on_actionZabrana_prodaje_cigareta_osobama_ispod_18_godina_triggered();
+
+    void on_actionZabrana_prodaje_alkohola_osobama_ispod_18_godina_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
