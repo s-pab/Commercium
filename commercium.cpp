@@ -26,6 +26,7 @@
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QTimer>
+#include <QPixmap>
 
 #include <QDateTime>
 
@@ -166,11 +167,9 @@ void MainWindow::on_actionUvezi_triggered()
 
 void MainWindow::on_actionO_nama_triggered()
 {
-    //ui->setupUi(this);
     QLabel *image = new QLabel();
-       image->setPixmap( QPixmap( ":/Images/SPABTeam.png" ) );
-       image->showMaximized();
-      // show();
+       image->setPixmap(QPixmap( ":/Images/SPABTeam.png"));
+       image->show();
 }
 
 void MainWindow::on_action_ablon_uplatnice_triggered()

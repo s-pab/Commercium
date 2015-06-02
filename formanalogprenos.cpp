@@ -21,16 +21,7 @@ void FormaNalogPrenos::on_pushButton_clicked()
 }
 void FormaNalogPrenos::writeprenos()
 {
-    QString imagePath = QFileDialog::getSaveFileName(
-                   this,
-
-                   tr("Save File"),
-
-                   "",
-
-                   tr("JPEG (*.jpg *.jpeg);;PNG (*.png)" )
-
-                   );
+    QString imagePath = QFileDialog::getSaveFileName(this,tr("Sačuvaj nalog za prenos!"),"",tr("JPEG (*.jpg *.jpeg);;PNG (*.png)" ));
 
        QPixmap imageObject = ui->centralwidget->grab(QRect(QPoint(0,0),QPoint(640,280)));
 

@@ -23,16 +23,7 @@ void FormaNalogUplata::on_pushButton_clicked()
 }
 void FormaNalogUplata::writeuplata()
 {
-    QString imagePath = QFileDialog::getSaveFileName(
-                   this,
-
-                   tr("Save File"),
-
-                   "",
-
-                   tr("JPEG (*.jpg *.jpeg);;PNG (*.png)" )
-
-                   );
+    QString imagePath = QFileDialog::getSaveFileName(this,tr("Sačuvaj nalog za uplatu!"),"", tr("JPEG (*.jpg *.jpeg);;PNG (*.png)" ));
 
        QPixmap imageObject = ui->centralwidget->grab(QRect(QPoint(0,0),QPoint(640,280)));
 

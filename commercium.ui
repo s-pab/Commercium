@@ -27,10 +27,10 @@
    <widget class="QMdiArea" name="mdiArea">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>30</y>
-      <width>200</width>
-      <height>160</height>
+      <x>-211</x>
+      <y>-111</y>
+      <width>431</width>
+      <height>301</height>
      </rect>
     </property>
     <property name="sizePolicy">
