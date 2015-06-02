@@ -1,5 +1,7 @@
 #include "formanalogisplata.h"
 #include "ui_formanalogisplata.h"
+#include <QString>
+#include <QFileDialog>
 
 FormaNalogIsplata::FormaNalogIsplata(QWidget *parent) :
     QMainWindow(parent),
@@ -20,7 +22,22 @@ void FormaNalogIsplata::on_pushButton_clicked()
 
 void FormaNalogIsplata::writeisplata()
 {
-    ui->centralwidget->grab(QRect(QPoint(0,0),QPoint(640,270))).save("isplata.jpg");
+    QString imagePath = QFileDialog::getSaveFileName(
+                   this,
+
+                   tr("Save File"),
+
+                   "",
+
+                   tr("JPEG (*.jpg *.jpeg);;PNG (*.png)" )
+
+                   );
+
+       QPixmap imageObject = ui->centralwidget->grab(QRect(QPoint(0,0),QPoint(640,280)));
+
+       imageObject.save(imagePath);
+
+    //ui->centralwidget->grab(QRect(QPoint(0,0),QPoint(640,270))).save("isplata.jpg");
 }
 
 void FormaNalogIsplata::on_pushButton_2_clicked()

@@ -1,5 +1,7 @@
 #include "formanalogprenos.h"
 #include "ui_formanalogprenos.h"
+#include <QString>
+#include <QFileDialog>
 
 FormaNalogPrenos::FormaNalogPrenos(QWidget *parent) :
     QMainWindow(parent),
@@ -19,7 +21,21 @@ void FormaNalogPrenos::on_pushButton_clicked()
 }
 void FormaNalogPrenos::writeprenos()
 {
-    ui->centralwidget->grab(QRect(QPoint(0,0),QPoint(640,275))).save("prenos.jpg");
+    QString imagePath = QFileDialog::getSaveFileName(
+                   this,
+
+                   tr("Save File"),
+
+                   "",
+
+                   tr("JPEG (*.jpg *.jpeg);;PNG (*.png)" )
+
+                   );
+
+       QPixmap imageObject = ui->centralwidget->grab(QRect(QPoint(0,0),QPoint(640,280)));
+
+       imageObject.save(imagePath);
+    //ui->centralwidget->grab(QRect(QPoint(0,0),QPoint(640,275))).save("prenos.jpg");
 }
 
 void FormaNalogPrenos::on_pushButton_2_clicked()
