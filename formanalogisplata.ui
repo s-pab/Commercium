@@ -23,6 +23,9 @@
       <height>20</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
+    </property>
     <property name="text">
      <string>valuta</string>
     </property>
@@ -36,6 +39,9 @@
       <height>41</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
+    </property>
    </widget>
    <widget class="QLabel" name="label_11">
     <property name="geometry">
@@ -45,6 +51,9 @@
       <width>111</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
     </property>
     <property name="text">
      <string>račun isplatioca</string>
@@ -59,6 +68,9 @@
       <height>181</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
+    </property>
     <property name="orientation">
      <enum>Qt::Vertical</enum>
     </property>
@@ -72,6 +84,9 @@
       <height>31</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
+    </property>
    </widget>
    <widget class="Line" name="line_4">
     <property name="geometry">
@@ -81,6 +96,9 @@
       <width>171</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
@@ -95,6 +113,9 @@
       <height>23</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
+    </property>
     <property name="text">
      <string>Očisti</string>
     </property>
@@ -107,6 +128,9 @@
       <width>71</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
     </property>
     <property name="text">
      <string>datum valute</string>
@@ -121,6 +145,9 @@
       <height>21</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
+    </property>
    </widget>
    <widget class="QLabel" name="label_6">
     <property name="geometry">
@@ -130,6 +157,9 @@
       <width>121</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
     </property>
     <property name="text">
      <string>mesto i datum prijema</string>
@@ -144,6 +174,9 @@
       <height>20</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
+    </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_4">
     <property name="geometry">
@@ -153,6 +186,9 @@
       <width>251</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_6">
@@ -164,6 +200,9 @@
       <height>21</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
+    </property>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
@@ -173,6 +212,9 @@
       <width>91</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
     </property>
     <property name="text">
      <string>svrha isplate</string>
@@ -187,6 +229,9 @@
       <height>20</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
+    </property>
    </widget>
    <widget class="QLabel" name="label_14">
     <property name="geometry">
@@ -196,6 +241,9 @@
       <width>47</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
     </property>
     <property name="text">
      <string>plaćanja</string>
@@ -210,6 +258,9 @@
       <height>16</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
+    </property>
     <property name="text">
      <string>model i poziv na broj (zaduženje)</string>
     </property>
@@ -223,6 +274,9 @@
       <height>31</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
+    </property>
    </widget>
    <widget class="Line" name="line_3">
     <property name="geometry">
@@ -232,6 +286,9 @@
       <width>171</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
@@ -246,6 +303,9 @@
       <height>21</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
+    </property>
     <property name="text">
      <string>šifra</string>
     </property>
@@ -258,6 +318,9 @@
       <width>71</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
     </property>
     <property name="text">
      <string>primalac</string>
@@ -272,6 +335,9 @@
       <height>41</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
+    </property>
    </widget>
    <widget class="Line" name="line_2">
     <property name="geometry">
@@ -281,6 +347,9 @@
       <width>161</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
@@ -295,6 +364,9 @@
       <height>21</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
+    </property>
     <property name="text">
      <string>iznos</string>
     </property>
@@ -307,6 +379,9 @@
       <width>81</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
     </property>
     <property name="text">
      <string>isplatilac</string>
@@ -328,6 +403,9 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
+    </property>
     <property name="text">
      <string>NALOG ZA ISPLATU</string>
     </property>
@@ -340,6 +418,9 @@
       <width>141</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
     </property>
     <property name="text">
      <string>pečat i potpis isplatioca</string>
@@ -354,6 +435,9 @@
       <height>23</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
+    </property>
     <property name="text">
      <string>Snimi isplatnicu</string>
     </property>
@@ -367,6 +451,9 @@
       <height>16</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
+    </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
     </property>
@@ -379,6 +466,9 @@
       <width>211</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">rgb (255, 255, 255)</string>
     </property>
     <property name="text">
      <string>potpis primaoca i broj lične karte</string>
