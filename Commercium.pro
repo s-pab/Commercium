@@ -26,7 +26,8 @@ SOURCES += main.cpp\
     formapopis.cpp \
     formanalogisplata.cpp \
     formanalogprenos.cpp \
-    artikl.cpp
+    artikl.cpp \
+    komitent.cpp
 
 HEADERS  += \
     artikl.h \

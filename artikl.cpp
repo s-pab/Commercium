@@ -6,30 +6,120 @@ Artikl::Artikl()
 }
 Artikl::Artikl(int sifra,QString naziv,QString jedinica,int kategorija)
 {
+    sifra=this->sifraProizvoda;
+    naziv=this->nazivProizvoda;
+    jedinica=this->jedinicaMere;
+    kategorija=this->kategorijaPDV;
+}
+void Artikl::dodajCenu(double nabavna, double marza, double rabat)
+{
 
 }
-void dodajCenu(double nabavna, double marza, double rabat);
-void dodajCenu(double nabavna, double prodajna);
-void dodajCenuProcenat(double nabavna, double marzaP, double rabatP);
-void setSifraProizvoda(int sifraProizvoda);
-void setNazivProizvoda(QString nazivProizvoda);
-void setProdajnaCena(double prodajnaCena);
-void setNabavnaCena(double nabavnaCena);
-void setMarza(double marza);
-void setMarzaProcenat(double marzaProcenat);
-void setRabat(double rabat);
-void setRabatProcenat(double rabatProcenat);
-void setJedinicaMere(QString jedinicaMere);
-void setKategorijaPDV(int kategorijaPDV);
-void setKolicina(int kolicina);
-int getSifraProizvoda();
-QString getNazivProizvoda();
-double getProdajnaCena();
-double getNabavnaCena();
-double getMarza();
-double getMarzaProcenat();
-double getRabat();
-double getRabatProcenat();
-QString getJedinicaMere();
-int getKategorijaPDV();
-int getKolicina();
+void Artikl::dodajCenu(double nabavna, double prodajna)
+{
+
+}
+void Artikl::dodajCenuProcenat(double nabavna, double marzaP, double rabatP)
+{
+
+}
+void Artikl::setSifraProizvoda(int sifraProizvoda)
+{
+
+}
+void Artikl::setNazivProizvoda(QString nazivProizvoda)
+{
+
+}
+
+void Artikl::setProdajnaCena(double prodajnaCena)
+{
+
+}
+
+void Artikl::setNabavnaCena(double nabavnaCena)
+{
+
+}
+
+void Artikl::setMarza(double marza)
+{
+
+}
+
+void Artikl::setMarzaProcenat(double marzaProcenat)
+{
+
+}
+
+void Artikl::setRabat(double rabat)
+{
+
+}
+
+void Artikl::setRabatProcenat(double rabatProcenat)
+{
+
+}
+
+void Artikl::setJedinicaMere(QString jedinicaMere)
+{
+
+}
+
+void Artikl::setKategorijaPDV(int kategorijaPDV)
+{
+
+}
+
+void Artikl::setKolicina(int kolicina)
+{
+
+}
+
+int Artikl::getSifraProizvoda()
+{
+    return sifraProizvoda;
+}
+QString Artikl::getNazivProizvoda()
+{
+    return nazivProizvoda;
+}
+double Artikl::getProdajnaCena()
+{
+    return prodajnaCena;
+}
+double Artikl::getNabavnaCena()
+{
+    return nabavnaCena;
+}
+double Artikl::getMarza()
+{
+    return marza;
+}
+
+double Artikl::getMarzaProcenat()
+{
+    return marzaProcenat;
+}
+double Artikl::getRabat()
+{
+    return rabat;
+}
+double Artikl::getRabatProcenat()
+{
+    return rabatProcenat;
+}
+
+QString Artikl::getJedinicaMere()
+{
+    return jedinicaMere;
+}
+int Artikl::getKategorijaPDV()
+{
+    return kategorijaPDV;
+}
+int Artikl::getKolicina()
+{
+    return kolicina;
+}
