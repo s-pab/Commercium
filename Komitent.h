@@ -1,7 +1,7 @@
 #ifndef KOMITENT_H
 #define KOMITENT_H
 
-#include <QString>;
+#include <QString>
 
 class Komitent{
 private:

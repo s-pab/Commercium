@@ -6,10 +6,10 @@ Artikl::Artikl()
 }
 Artikl::Artikl(int sifra,QString naziv,QString jedinica,int kategorija)
 {
-    sifra=this->sifraProizvoda;
-    naziv=this->nazivProizvoda;
-    jedinica=this->jedinicaMere;
-    kategorija=this->kategorijaPDV;
+    this->sifraProizvoda=sifra;
+    this->nazivProizvoda=naziv;
+    this->jedinicaMere=jedinica;
+    this->kategorijaPDV=kategorija;
 }
 void Artikl::dodajCenu(double nabavna, double marza, double rabat)
 {
