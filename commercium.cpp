@@ -13,6 +13,7 @@
 #include "formapopis.h"
 #include "formanalogisplata.h"
 #include "formanalogprenos.h"
+#include "formaartikl.h"
 #include <QLabel>
 #include <QString>
 
@@ -133,38 +134,6 @@ void MainWindow::on_actionNivelacije_triggered()
 }
 
 
-
-void MainWindow::on_actionUvezi_triggered()
-{
-    QString filePath = QFileDialog::getOpenFileName(this, QString(), QString(), "Comma separated value (*.csv);;All Files (*.*)");
-    if(!filePath.isEmpty())
-    {
-        QFile file(filePath);
-        QRegExp sep("[;]");
-        if(file.open(QIODevice::ReadOnly))
-        {
-            QTextStream in(&file);
-            QSqlQuery query;
-            QString red = in.readLine();
-            QStringList lista = red.split(sep);
-            while(!in.atEnd())
-            {
-                red = in.readLine();
-                lista = red.split(sep);
-                query.prepare("INSERT INTO Artikl (sifraProizvoda,nazivProizvoda,jedinicaMere,nabavnaCena,kategorijaPDV,marza,rabat,prodajnaCena,kolicina) VALUES (:SIFRA,:NAZIV,:JEDMER,:NABAVNA,:KATEGORIJA,'0,00','0,00','0,00','0,00')");
-                query.bindValue(":SIFRA",lista[0].toInt());
-                query.bindValue(":NAZIV",lista[1]);
-                query.bindValue(":JEDMER","kom");
-                query.bindValue(":NABAVNA",lista[4].toDouble());
-                query.bindValue(":KATEGORIJA",lista[2].toInt());
-
-                query.exec();
-           }
-        }
-        file.close();
-    }
-}
-
 void MainWindow::on_actionO_nama_triggered()
 {
     QLabel *image = new QLabel();
@@ -239,4 +208,11 @@ void MainWindow::on_actionZabrana_prodaje_alkohola_osobama_ispod_18_godina_trigg
     QPixmap imageObject = image->grab(QRect(QPoint(80,0),QPoint(440,510)));
     imageObject.save(imagePath);
     image->show();
+}
+
+void MainWindow::on_actionPrikaz_informacija_o_artiklima_triggered()
+{
+    FormaArtikl *fa=new FormaArtikl(ui->mdiArea);
+    ui->mdiArea->addSubWindow(fa);
+    fa->showMaximized();
 }

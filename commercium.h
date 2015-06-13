@@ -34,9 +34,6 @@ private slots:
 
     void on_actionNivelacije_triggered();
 
-
-    void on_actionUvezi_triggered();
-
     void connectToDatabase();
 
     void on_actionO_nama_triggered();
@@ -57,6 +54,8 @@ private slots:
     void on_actionZabrana_prodaje_cigareta_osobama_ispod_18_godina_triggered();
 
     void on_actionZabrana_prodaje_alkohola_osobama_ispod_18_godina_triggered();
+
+    void on_actionPrikaz_informacija_o_artiklima_triggered();
 
 private:
     Ui::MainWindow *ui;

@@ -27,7 +27,8 @@ SOURCES += main.cpp\
     formanalogisplata.cpp \
     formanalogprenos.cpp \
     artikl.cpp \
-    komitent.cpp
+    komitent.cpp \
+    formaartikl.cpp
 
 HEADERS  += \
     artikl.h \
@@ -52,7 +53,8 @@ HEADERS  += \
     formanaloguplata.h \
     formapopis.h \
     formanalogisplata.h \
-    formanalogprenos.h
+    formanalogprenos.h \
+    formaartikl.h
 
 FORMS    += commercium.ui \
     formakalkulacije.ui \
@@ -66,7 +68,8 @@ FORMS    += commercium.ui \
     formanaloguplata.ui \
     formapopis.ui \
     formanalogisplata.ui \
-    formanalogprenos.ui
+    formanalogprenos.ui \
+    formaartikl.ui
 
 RESOURCES += \
     slike.qrc
