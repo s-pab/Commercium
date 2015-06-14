@@ -14,6 +14,7 @@
 #include "formanalogisplata.h"
 #include "formanalogprenos.h"
 #include "formaartikl.h"
+#include "formakomitent.h"
 #include <QLabel>
 #include <QString>
 
@@ -215,4 +216,11 @@ void MainWindow::on_actionPrikaz_informacija_o_artiklima_triggered()
     FormaArtikl *fa=new FormaArtikl(ui->mdiArea);
     ui->mdiArea->addSubWindow(fa);
     fa->showMaximized();
+}
+
+void MainWindow::on_actionPrikaz_informacija_o_komitentima_triggered()
+{
+    FormaKomitent *fkp=new FormaKomitent (ui->mdiArea); //fkp kao forma komitenti prikaz
+    ui->mdiArea->addSubWindow(fkp);
+    fkp->showMaximized();
 }

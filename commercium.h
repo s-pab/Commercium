@@ -57,6 +57,8 @@ private slots:
 
     void on_actionPrikaz_informacija_o_artiklima_triggered();
 
+    void on_actionPrikaz_informacija_o_komitentima_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

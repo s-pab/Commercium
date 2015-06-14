@@ -14,7 +14,7 @@
    <string>Commercium</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="slike.qrc">
+   <iconset>
     <normaloff>:/Images/commercium.ico</normaloff>:/Images/commercium.ico</iconset>
   </property>
   <property name="styleSheet">
@@ -97,10 +97,7 @@
     <property name="title">
      <string>Komitent</string>
     </property>
-    <addaction name="actionDodaj"/>
-    <addaction name="actionIzmeni_2"/>
-    <addaction name="actionObri_i_3"/>
-    <addaction name="actionPrika_i"/>
+    <addaction name="actionPrikaz_informacija_o_komitentima"/>
    </widget>
    <widget class="QMenu" name="menuDokumenta">
     <property name="title">
@@ -375,10 +372,13 @@
     <string>Prikaz informacija o artiklima</string>
    </property>
   </action>
+  <action name="actionPrikaz_informacija_o_komitentima">
+   <property name="text">
+    <string>Prikaz informacija o komitentima</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources>
-  <include location="slike.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
