@@ -29,7 +29,8 @@ SOURCES += main.cpp\
     artikl.cpp \
     komitent.cpp \
     formaartikl.cpp \
-    formakomitent.cpp
+    formakomitent.cpp \
+    kalkulacije.cpp
 
 HEADERS  += \
     artikl.h \
