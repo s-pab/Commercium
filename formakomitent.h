@@ -16,15 +16,15 @@ public:
     ~FormaKomitent();
 
 private slots:
-    void on_pushButton_3_clicked();
+    void on_prikazKomitenta_clicked();
 
-    void on_pushButton_clicked();
+    void on_dodajKomitenta_clicked();
 
-    void on_pushButton_2_clicked();
+    void on_izmenaKomitenta_clicked();
 
-    void on_tableView_doubleClicked(const QModelIndex &index);
+    void on_tabelaKomitenti_doubleClicked(const QModelIndex &index);
 
-    void on_pushButton_4_clicked();
+    void on_obrisiKomitenta_clicked();
 
 private:
     Ui::FormaKomitent *ui;

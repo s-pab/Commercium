@@ -17,7 +17,7 @@
    <string>Komitenti</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableView" name="tableView">
+   <widget class="QTableView" name="tabelaKomitenti">
     <property name="geometry">
      <rect>
       <x>215</x>
@@ -27,7 +27,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="sifra">
     <property name="geometry">
      <rect>
       <x>220</x>
@@ -37,7 +37,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="naziv">
     <property name="geometry">
      <rect>
       <x>300</x>
@@ -47,7 +47,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="ulica">
     <property name="geometry">
      <rect>
       <x>420</x>
@@ -57,7 +57,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
+   <widget class="QLineEdit" name="mesto">
     <property name="geometry">
      <rect>
       <x>560</x>
@@ -67,7 +67,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_5">
+   <widget class="QLineEdit" name="pib">
     <property name="geometry">
      <rect>
       <x>710</x>
@@ -77,7 +77,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_6">
+   <widget class="QLineEdit" name="tekuciracun">
     <property name="geometry">
      <rect>
       <x>770</x>
@@ -87,7 +87,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="dodajKomitenta">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -100,7 +100,7 @@
      <string>Dodaj novog komitenta</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="izmenaKomitenta">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -113,7 +113,7 @@
      <string>Izmeni</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="prikazKomitenta">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -126,7 +126,7 @@
      <string>Prikaži</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="obrisiKomitenta">
     <property name="geometry">
      <rect>
       <x>30</x>
