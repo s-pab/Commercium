@@ -43,10 +43,10 @@ void Kalkulacija::obracunaj()
     double ukupnoBezPVD;
     double ukupnoPDV;*/
 }
-Artikl Kalkulacija::getArtikl()
-{
+//Artikl Kalkulacija::getArtikl()
+//{
     //ova funkcija nam samo omogucava da imamo vezu sa trenutnim artiklom koga obradjujemo
-}
+//}
 
 //ove funkcije nam trebaju da kad funkcija obracunaj odradi svoje da se posle sa ovim funkcijama
 //vrednosti ovih promenljivh upisu u polja koja njima odgovaraju. predlazem da napravimo jednu funkciju ozvezi
