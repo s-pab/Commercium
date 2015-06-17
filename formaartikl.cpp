@@ -20,7 +20,7 @@ FormaArtikl::~FormaArtikl()
     delete ui;
 }
 
-void FormaArtikl::on_pushButton_5_clicked()
+void FormaArtikl::on_uveziArtikle_clicked()
 {
     QString filePath = QFileDialog::getOpenFileName(this, QString(), QString(), "Comma separated value (*.csv);;All Files (*.*)");
         if(!filePath.isEmpty())
@@ -51,15 +51,14 @@ void FormaArtikl::on_pushButton_5_clicked()
         }
 }
 
-void FormaArtikl::on_pushButton_4_clicked()
+void FormaArtikl::on_prikaziArtikle_clicked()
 {
     QSqlQuery query;
     query.prepare("SELECT sifraProizvoda,nazivProizvoda,jedinicaMere,nabavnaCena,kategorijaPDV,marza,rabat,prodajnaCena,kolicina FROM Artikl");
-    //query.bindValue(":brpopisa",ui->spinBox->value());
     query.exec();
     QSqlQueryModel* model = new QSqlQueryModel(this);
     model->setQuery(query);
-    ui->tableView->setModel(model);
-    ui->tableView->resizeColumnsToContents();
-    ui->tableView->resizeRowsToContents();
+    ui->tabelaArtikli->setModel(model);
+    ui->tabelaArtikli->resizeColumnsToContents();
+    ui->tabelaArtikli->resizeRowsToContents();
 }

@@ -16,9 +16,9 @@ public:
     ~FormaArtikl();
 
 private slots:
-    void on_pushButton_5_clicked();
+    void on_prikaziArtikle_clicked();
 
-    void on_pushButton_4_clicked();
+    void on_uveziArtikle_clicked();
 
 private:
     Ui::FormaArtikl *ui;

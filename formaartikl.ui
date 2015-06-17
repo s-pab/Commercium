@@ -14,7 +14,7 @@
    <string>Artikli</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableView" name="tableView">
+   <widget class="QTableView" name="tabelaArtikli">
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -24,7 +24,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="sifra">
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -34,7 +34,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="naziv">
     <property name="geometry">
      <rect>
       <x>260</x>
@@ -44,7 +44,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="jedinicamere">
     <property name="geometry">
      <rect>
       <x>440</x>
@@ -54,7 +54,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
+   <widget class="QLineEdit" name="nabavnacena">
     <property name="geometry">
      <rect>
       <x>520</x>
@@ -64,7 +64,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_5">
+   <widget class="QLineEdit" name="kategorijapdv">
     <property name="geometry">
      <rect>
       <x>600</x>
@@ -74,7 +74,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_6">
+   <widget class="QLineEdit" name="marza">
     <property name="geometry">
      <rect>
       <x>680</x>
@@ -84,7 +84,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_7">
+   <widget class="QLineEdit" name="rabat">
     <property name="geometry">
      <rect>
       <x>740</x>
@@ -94,7 +94,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_8">
+   <widget class="QLineEdit" name="prodajnacena">
     <property name="geometry">
      <rect>
       <x>800</x>
@@ -104,7 +104,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_9">
+   <widget class="QLineEdit" name="kolicina">
     <property name="geometry">
      <rect>
       <x>880</x>
@@ -114,7 +114,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="labelaSifra">
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -127,7 +127,7 @@
      <string>Šifra proizvoda</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="labelaNaziv">
     <property name="geometry">
      <rect>
       <x>260</x>
@@ -140,7 +140,7 @@
      <string> Naziv proizvoda</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="labelaJedinicamere">
     <property name="geometry">
      <rect>
       <x>440</x>
@@ -153,7 +153,7 @@
      <string>Jedinica mere</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="labelaNabavnacena">
     <property name="geometry">
      <rect>
       <x>520</x>
@@ -166,7 +166,7 @@
      <string>Nabavna cena</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_5">
+   <widget class="QLabel" name="labelaKategorijaPDV">
     <property name="geometry">
      <rect>
       <x>600</x>
@@ -179,7 +179,7 @@
      <string>Kategorija PDV</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QLabel" name="labelaMarza">
     <property name="geometry">
      <rect>
       <x>680</x>
@@ -192,7 +192,7 @@
      <string> Marža</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_7">
+   <widget class="QLabel" name="labelaRabat">
     <property name="geometry">
      <rect>
       <x>740</x>
@@ -205,7 +205,7 @@
      <string>Rabat</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_8">
+   <widget class="QLabel" name="labelaProdajnacena">
     <property name="geometry">
      <rect>
       <x>800</x>
@@ -218,7 +218,7 @@
      <string>Prodajna cena</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_9">
+   <widget class="QLabel" name="labelaKolicina">
     <property name="geometry">
      <rect>
       <x>880</x>
@@ -231,7 +231,7 @@
      <string>Količina</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="dodajArtikl">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -244,7 +244,7 @@
      <string>Dodaj novi artikl</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="izmeniArtikl">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -257,7 +257,7 @@
      <string>Izmeni</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="obrisiArtikl">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -270,7 +270,7 @@
      <string>Obriši</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="prikaziArtikle">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -283,7 +283,7 @@
      <string>Prikaži</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="uveziArtikle">
     <property name="geometry">
      <rect>
       <x>10</x>
