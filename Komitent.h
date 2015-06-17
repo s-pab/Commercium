@@ -14,6 +14,7 @@ private:
 public:
     Komitent();
     Komitent(QString naziv, int sifra, QString ulica, QString mesto, unsigned int pib, QString tekuciRacun);
+    QString kreirajUpit();
 };
 
 #endif // KOMITENT_H
