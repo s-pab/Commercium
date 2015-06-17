@@ -16,9 +16,9 @@ public:
     ~FormaNalogUplata();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_snimiUplatnicu_clicked();
 
-    void on_pushButton_2_clicked();
+    void on_ocistiUplatnicu_clicked();
 
 private:
     Ui::FormaNalogUplata *ui;

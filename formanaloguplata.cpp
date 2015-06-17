@@ -17,7 +17,7 @@ FormaNalogUplata::~FormaNalogUplata()
     delete ui;
 }
 
-void FormaNalogUplata::on_pushButton_clicked()
+void FormaNalogUplata::on_snimiUplatnicu_clicked()
 {
     writeuplata();
 }
@@ -31,15 +31,15 @@ void FormaNalogUplata::writeuplata()
     //ui->centralwidget->grab(QRect(QPoint(0,0),QPoint(640,270))).save("uplatnica.jpg");
 }
 
-void FormaNalogUplata::on_pushButton_2_clicked()
+void FormaNalogUplata::on_ocistiUplatnicu_clicked()
 {
-    ui->lineEdit->clear();
-    ui->lineEdit_2->clear();
-    ui->lineEdit_3->clear();
-    ui->lineEdit_4->clear();
-    ui->lineEdit_5->clear();
-    ui->lineEdit_6->clear();
-    ui->lineEdit_7->clear();
-    ui->lineEdit_8->clear();
-    ui->lineEdit_9->clear();
+    ui->uplatilac->clear();
+    ui->svrhaUplate->clear();
+    ui->primalac->clear();
+    ui->sifraPlacanja->clear();
+    ui->valuta->clear();
+    ui->iznos->clear();
+    ui->racunPrimaoca->clear();
+    ui->model->clear();
+    ui->pozivNabroj->clear();
 }

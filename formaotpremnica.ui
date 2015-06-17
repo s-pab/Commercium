@@ -38,7 +38,7 @@
      <string>Otpremnica Br.</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="brojOtpremnice">
     <property name="geometry">
      <rect>
       <x>200</x>
@@ -95,21 +95,21 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="nova">
        <property name="text">
         <string>Nova</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="izmeni">
        <property name="text">
         <string>Izmeni</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="obrisi">
        <property name="text">
         <string>Obriši</string>
        </property>
@@ -117,33 +117,33 @@
      </item>
     </layout>
    </widget>
-   <widget class="QListView" name="listView">
+   <widget class="QTableWidget" name="tabelaPosiljalac">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>30</y>
+      <width>256</width>
+      <height>81</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tabelaPrimalac">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>30</y>
+      <width>256</width>
+      <height>81</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTableView" name="tabelaOtpremnica">
     <property name="geometry">
      <rect>
       <x>50</x>
       <y>150</y>
       <width>631</width>
-      <height>271</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QListView" name="listView_2">
-    <property name="geometry">
-     <rect>
-      <x>430</x>
-      <y>30</y>
-      <width>241</width>
-      <height>81</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QListView" name="listView_3">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>30</y>
-      <width>241</width>
-      <height>81</height>
+      <height>261</height>
      </rect>
     </property>
    </widget>

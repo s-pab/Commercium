@@ -13,9 +13,9 @@ FormaNivelacija::~FormaNivelacija()
     delete ui;
 }
 
-void FormaNivelacija::on_pushButton_3_clicked()
+void FormaNivelacija::on_obrisi_clicked()
 {
-    ui->lineEdit->clear();
-    ui->lineEdit_2->clear();
-    ui->listView->clearFocus();
+    ui->brojNivelacije->clear();
+    ui->datumNivelacije->clear();
+    ui->tabelaNivelacije->clearFocus();
 }

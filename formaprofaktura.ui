@@ -20,7 +20,7 @@
    <string>Profaktura</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="sifraKupca">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -56,7 +56,7 @@
      <string> Šifra kupca:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_9">
+   <widget class="QLineEdit" name="brojPredracuna">
     <property name="geometry">
      <rect>
       <x>230</x>
@@ -66,7 +66,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_6">
+   <widget class="QLineEdit" name="datumPredracuna">
     <property name="geometry">
      <rect>
       <x>330</x>
@@ -76,7 +76,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="PIB">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -86,7 +86,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_8">
+   <widget class="QLineEdit" name="valuta">
     <property name="geometry">
      <rect>
       <x>330</x>
@@ -114,7 +114,7 @@
      <string>PREDRačun broj</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="mesto">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -124,7 +124,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
+   <widget class="QLineEdit" name="kupac">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -158,21 +158,21 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <widget class="QPushButton" name="pushButton_4">
+      <widget class="QPushButton" name="nova">
        <property name="text">
         <string>Nova</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_5">
+      <widget class="QPushButton" name="izmeni">
        <property name="text">
         <string>Izmeni</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_6">
+      <widget class="QPushButton" name="obrisi">
        <property name="text">
         <string>Obriši</string>
        </property>
@@ -219,7 +219,7 @@
      <string>PIB:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_5">
+   <widget class="QLineEdit" name="mestoIzdavanja">
     <property name="geometry">
      <rect>
       <x>330</x>
@@ -242,13 +242,13 @@
      <string>   Mesto:</string>
     </property>
    </widget>
-   <widget class="QListView" name="listView">
+   <widget class="QTableView" name="tabelaPredracuna">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>20</x>
       <y>150</y>
-      <width>401</width>
-      <height>192</height>
+      <width>411</width>
+      <height>191</height>
      </rect>
     </property>
    </widget>

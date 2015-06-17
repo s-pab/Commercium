@@ -13,10 +13,10 @@ FormaOtpremnica::~FormaOtpremnica()
     delete ui;
 }
 
-void FormaOtpremnica::on_pushButton_3_clicked()
+void FormaOtpremnica::on_obrisi_clicked()
 {
-    ui->lineEdit->clear();
-    ui->listView->clearFocus();
-    ui->listView_2->clearFocus();
-    ui->listView_3->clearFocus();
+    ui->brojOtpremnice->clear();
+    ui->tabelaOtpremnica->clearFocus();
+    ui->tabelaPosiljalac->clearFocus();
+    ui->tabelaPrimalac->clearFocus();
 }

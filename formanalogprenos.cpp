@@ -15,7 +15,7 @@ FormaNalogPrenos::~FormaNalogPrenos()
     delete ui;
 }
 
-void FormaNalogPrenos::on_pushButton_clicked()
+void FormaNalogPrenos::on_snimiPrenos_clicked()
 {
     writeprenos();
 }
@@ -29,19 +29,19 @@ void FormaNalogPrenos::writeprenos()
     //ui->centralwidget->grab(QRect(QPoint(0,0),QPoint(640,275))).save("prenos.jpg");
 }
 
-void FormaNalogPrenos::on_pushButton_2_clicked()
+void FormaNalogPrenos::on_ocistiPrenos_clicked()
 {
-    ui->lineEdit->clear();
-    ui->lineEdit_2->clear();
-    ui->lineEdit_3->clear();
-    ui->lineEdit_4->clear();
-    ui->lineEdit_5->clear();
-    ui->lineEdit_6->clear();
-    ui->lineEdit_7->clear();
-    ui->lineEdit_8->clear();
-    ui->lineEdit_9->clear();
-    ui->lineEdit_10->clear();
-    ui->lineEdit_11->clear();
-    ui->lineEdit_12->clear();
-    ui->lineEdit_13->clear();
+    ui->duznik->clear();
+    ui->svrhaIsplate->clear();
+    ui->poverilac->clear();
+    ui->sifraPlacanja->clear();
+    ui->valuta->clear();
+    ui->iznos->clear();
+    ui->racunDuznika->clear();
+    ui->modelZaduzenje->clear();
+    ui->pozivNabrojzaduzenje->clear();
+    ui->racunPoverioca->clear();
+    ui->modelOdobrenje->clear();
+    ui->pozivNabrojodobrenje->clear();
+    ui->hitno->clear();
 }

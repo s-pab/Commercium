@@ -13,8 +13,8 @@ FormaTrebovanje::~FormaTrebovanje()
     delete ui;
 }
 
-void FormaTrebovanje::on_pushButton_3_clicked()
+void FormaTrebovanje::on_obrisi_clicked()
 {
-    ui->lineEdit->clear();
-    ui->listView->clearFocus();
+    ui->brojTrebvanja->clear();
+    ui->tabelaTrebovanja->clearFocus();
 }

@@ -16,7 +16,7 @@ public:
     ~FormaOtpremnica();
 
 private slots:
-    void on_pushButton_3_clicked();
+    void on_obrisi_clicked();
 
 private:
     Ui::FormaOtpremnica *ui;

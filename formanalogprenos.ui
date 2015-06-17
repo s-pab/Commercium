@@ -14,7 +14,7 @@
    <string>Nalog za prenos</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="lineEdit_4">
+   <widget class="QLineEdit" name="svrhaIsplate">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -24,7 +24,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="duznik">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -86,7 +86,7 @@
      <string>mesto i datum prijema</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_6">
+   <widget class="QLineEdit" name="racunDuznika">
     <property name="geometry">
      <rect>
       <x>290</x>
@@ -129,7 +129,7 @@
      <string>NALOG ZA PRENOS</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_8">
+   <widget class="QLineEdit" name="modelZaduzenje">
     <property name="geometry">
      <rect>
       <x>290</x>
@@ -152,7 +152,7 @@
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="ocistiPrenos">
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -165,7 +165,7 @@
      <string>Očisti</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_7">
+   <widget class="QLineEdit" name="poverilac">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -188,7 +188,7 @@
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="sifraPlacanja">
     <property name="geometry">
      <rect>
       <x>290</x>
@@ -198,7 +198,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="snimiPrenos">
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -211,7 +211,7 @@
      <string>Snimi prenos</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_5">
+   <widget class="QLineEdit" name="iznos">
     <property name="geometry">
      <rect>
       <x>400</x>
@@ -286,7 +286,7 @@
      <string>šifra</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_9">
+   <widget class="QLineEdit" name="pozivNabrojzaduzenje">
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -322,7 +322,7 @@
      <string>iznos</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="valuta">
     <property name="geometry">
      <rect>
       <x>350</x>
@@ -358,7 +358,7 @@
      <string>pečat i potpis isplatioca</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_10">
+   <widget class="QLineEdit" name="racunPoverioca">
     <property name="geometry">
      <rect>
       <x>290</x>
@@ -394,7 +394,7 @@
      <string>račun poverioca (primaoca)</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_11">
+   <widget class="QLineEdit" name="modelOdobrenje">
     <property name="geometry">
      <rect>
       <x>290</x>
@@ -404,7 +404,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_12">
+   <widget class="QLineEdit" name="pozivNabrojodobrenje">
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -414,7 +414,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_13">
+   <widget class="QLineEdit" name="hitno">
     <property name="geometry">
      <rect>
       <x>530</x>

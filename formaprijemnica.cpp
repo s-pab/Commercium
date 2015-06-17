@@ -13,10 +13,10 @@ FormaPrijemnica::~FormaPrijemnica()
     delete ui;
 }
 
-void FormaPrijemnica::on_pushButton_3_clicked()
+void FormaPrijemnica::on_obrisi_clicked()
 {
-    ui->lineEdit->clear();
-    ui->listView->clearFocus();
-    ui->listView_3->clearFocus();
-    ui->listView_4->clearFocus();
+    ui->brojPrijemnice->clear();
+    ui->tabelaPosiljalac->clearFocus();
+    ui->tabelaPrijemnica->clearFocus();
+    ui->tabelaPrimalac->clearFocus();
 }

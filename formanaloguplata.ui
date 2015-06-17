@@ -14,7 +14,7 @@
    <string>Nalog za uplatu</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="uplatilac">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -24,7 +24,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="sifraPlacanja">
     <property name="geometry">
      <rect>
       <x>290</x>
@@ -34,7 +34,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="valuta">
     <property name="geometry">
      <rect>
       <x>350</x>
@@ -44,7 +44,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
+   <widget class="QLineEdit" name="svrhaUplate">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -54,7 +54,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_5">
+   <widget class="QLineEdit" name="iznos">
     <property name="geometry">
      <rect>
       <x>400</x>
@@ -64,7 +64,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_6">
+   <widget class="QLineEdit" name="racunPrimaoca">
     <property name="geometry">
      <rect>
       <x>290</x>
@@ -74,7 +74,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_7">
+   <widget class="QLineEdit" name="primalac">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -84,7 +84,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_8">
+   <widget class="QLineEdit" name="model">
     <property name="geometry">
      <rect>
       <x>290</x>
@@ -94,7 +94,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_9">
+   <widget class="QLineEdit" name="pozivNabroj">
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -332,7 +332,7 @@
      <string>plaćanja</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="snimiUplatnicu">
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -345,7 +345,7 @@
      <string>Snimi uplatnicu</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="ocistiUplatnicu">
     <property name="geometry">
      <rect>
       <x>280</x>

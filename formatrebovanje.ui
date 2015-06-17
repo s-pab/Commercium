@@ -20,17 +20,7 @@
    <string>Trebovanje</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QListView" name="listView">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>80</y>
-      <width>721</width>
-      <height>271</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="brojTrebvanja">
     <property name="geometry">
      <rect>
       <x>190</x>
@@ -69,27 +59,37 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="novo">
        <property name="text">
         <string>Novo</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="izmeni">
        <property name="text">
         <string>Izmeni</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="obrisi">
        <property name="text">
         <string>Obriši</string>
        </property>
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QTableView" name="tabelaTrebovanja">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>60</y>
+      <width>721</width>
+      <height>301</height>
+     </rect>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

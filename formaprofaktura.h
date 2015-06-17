@@ -16,7 +16,7 @@ public:
     ~FormaProfaktura();
 
 private slots:
-    void on_pushButton_6_clicked();
+    void on_obrisi_clicked();
 
 private:
     Ui::FormaProfaktura *ui;
