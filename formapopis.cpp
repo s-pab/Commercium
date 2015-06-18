@@ -32,7 +32,7 @@ FormaPopis::~FormaPopis()
     delete ui;
 }
 
-void FormaPopis::on_pushButton_clicked()
+void FormaPopis::on_noviPopis_clicked()
 {
     QSqlQuery query;
     QSqlQuery query2;
@@ -40,7 +40,7 @@ void FormaPopis::on_pushButton_clicked()
     query.exec("SELECT SifraPopisa FROM POPISOSNOVNO");
     while(query.next())
     {
-        if(query.value(0).toInt() == ui->spinBox->value())
+        if(query.value(0).toInt() == ui->brojPopisa1->value())
         {
             postoji=true;
             break;
@@ -49,8 +49,8 @@ void FormaPopis::on_pushButton_clicked()
     if(!postoji)
     {
         query.prepare("INSERT INTO POPISOSNOVNO (SIFRAPOPISA,DATUM,UKUPNO) VALUES (:SIFRA,:DATUM,'0,00')");
-        query.bindValue(":SIFRA",ui->spinBox->value());
-        QDate Datum = ui->dateEdit->date();
+        query.bindValue(":SIFRA",ui->brojPopisa1->value());
+        QDate Datum = ui->datumPopisa->date();
         query.bindValue(":DATUM",Datum);
         query.exec();
         query.exec("SELECT SIFRAPROIZVODA,NAZIVPROIZVODA,PRODAJNACENA FROM Artikl");
@@ -61,45 +61,45 @@ void FormaPopis::on_pushButton_clicked()
             query2.bindValue(":CENA",query.value(2));
             query2.bindValue(":KOLICINA",0);
             query2.bindValue(":UKUPNO",0);
-            query2.bindValue(":BRPOPISA",ui->spinBox->value());
+            query2.bindValue(":BRPOPISA",ui->brojPopisa1->value());
             query2.exec();
         }
         query.prepare("SELECT SifraProizvoda,NazivProizvoda,ProdajnaCena,Kolicina,Ukupno FROM PopisPodaci WHERE brpopisa = :brpopisa");
-        query.bindValue(":brpopisa",ui->spinBox->value());
+        query.bindValue(":brpopisa",ui->brojPopisa1->value());
         query.exec();
         QSqlQueryModel* model = new QSqlQueryModel(this);
         model->setQuery(query);
-        ui->tableView_6->setModel(model);
-        ui->tableView_6->resizeColumnsToContents();
-        ui->tableView_6->resizeRowsToContents();
+        ui->tabelaArtikala->setModel(model);
+        ui->tabelaArtikala->resizeColumnsToContents();
+        ui->tabelaArtikala->resizeRowsToContents();
     }
 }
 
-void FormaPopis::on_lineEdit_29_returnPressed()
+void FormaPopis::on_sifra_returnPressed()
 {
-    if(!ui->lineEdit_29->text().isEmpty())
+    if(!ui->sifra->text().isEmpty())
     {
         QSqlQuery query;
         query.prepare("SELECT SifraProizvoda,NazivProizvoda,ProdajnaCena,Kolicina,Ukupno FROM PopisPodaci WHERE brpopisa = :brpopisa");
-        query.bindValue(":brpopisa",ui->spinBox->value());
+        query.bindValue(":brpopisa",ui->brojPopisa1->value());
         query.exec();
         while(query.next())
         {
             int sifra = query.value(0).toInt();
-            if(sifra==ui->lineEdit_29->text().toInt())
+            if(sifra==ui->sifra->text().toInt())
             {
-                ui->lineEdit_30->setText(query.value(1).toString());
+                ui->naziv->setText(query.value(1).toString());
                 double pom = query.value(3).toDouble();
-                ui->lineEdit_26->setText(QString::number(pom,'.',2));
-                kol=ui->lineEdit_26->text();
+                ui->kolicina->setText(QString::number(pom,'.',2));
+                kol=ui->kolicina->text();
 
-                ui->lineEdit_27->setText(query.value(2).toString());
-                cena=ui->lineEdit_27->text();
+                ui->cena->setText(query.value(2).toString());
+                cena=ui->cena->text();
                 pom=query.value(4).toDouble();
-                ui->lineEdit_28->setText(QString::number(pom,'.',2));
+                ui->suma->setText(QString::number(pom,'.',2));
                 QKeyEvent *event = new QKeyEvent ( QEvent::KeyPress, Qt::Key_Tab, Qt::NoModifier);
                 QCoreApplication::postEvent (this, event);
-                osvezi(ui->lineEdit_29->text().toInt());
+                osvezi(ui->sifra->text().toInt());
                 break;
             }
         }
@@ -110,14 +110,14 @@ void FormaPopis::on_lineEdit_29_returnPressed()
     }
 }
 
-void FormaPopis::on_pushButton_2_clicked()
+void FormaPopis::on_azuriranjePopisa_clicked()
 {
     QSqlQuery query;
     bool postoji = false;
     query.exec("SELECT SifraPopisa FROM POPISOSNOVNO");
     while(query.next())
     {
-        if(query.value(0).toInt() == ui->spinBox->value())
+        if(query.value(0).toInt() == ui->brojPopisa1->value())
         {
             postoji=true;
             break;
@@ -126,13 +126,13 @@ void FormaPopis::on_pushButton_2_clicked()
     if(postoji)
     {
         query.prepare("SELECT SifraProizvoda,NazivProizvoda,ProdajnaCena,Kolicina,Ukupno FROM PopisPodaci where brpopisa = :brpopisa");
-        query.bindValue(":brpopisa",ui->spinBox->value());
+        query.bindValue(":brpopisa",ui->brojPopisa1->value());
         query.exec();
         QSqlQueryModel* model = new QSqlQueryModel(this);
         model->setQuery(query);
-        ui->tableView_6->setModel(model);
-        ui->tableView_6->resizeColumnsToContents();
-        ui->tableView_6->resizeRowsToContents();
+        ui->tabelaArtikala->setModel(model);
+        ui->tabelaArtikala->resizeColumnsToContents();
+        ui->tabelaArtikala->resizeRowsToContents();
         suma();
     }
 
@@ -144,43 +144,43 @@ void FormaPopis::osvezi(int sif)
     query.prepare("SELECT SifraProizvoda,NazivProizvoda,ProdajnaCena,Kolicina,Ukupno FROM PopisPodaci WHERE SifraProizvoda>? AND SifraProizvoda<? AND brpopisa = ?");
     query.addBindValue(sif-6);
     query.addBindValue(sif+6);
-    query.addBindValue(ui->spinBox->value());
+    query.addBindValue(ui->brojPopisa1->value());
     query.exec();
     QSqlQueryModel* model = new QSqlQueryModel(this);
     model->setQuery(query);
-    ui->tableView_6->setModel(model);
-    ui->tableView_6->resizeColumnsToContents();
-    ui->tableView_6->resizeRowsToContents();
+    ui->tabelaArtikala->setModel(model);
+    ui->tabelaArtikala->resizeColumnsToContents();
+    ui->tabelaArtikala->resizeRowsToContents();
 }
 
-void FormaPopis::on_lineEdit_30_textChanged(const QString &arg1)
+void FormaPopis::on_naziv_textChanged(const QString &arg1)
 {
     QSqlQuery query;
     query.prepare("SELECT SifraProizvoda,NazivProizvoda,ProdajnaCena,Kolicina,Ukupno FROM PopisPodaci WHERE brpopisa = ? AND NazivProizvoda LIKE '%'+?+'%'");
-    query.addBindValue(ui->spinBox->value());
+    query.addBindValue(ui->brojPopisa1->value());
     query.addBindValue(arg1);
     query.exec();
     QSqlQueryModel* model = new QSqlQueryModel(this);
     model->setQuery(query);
-    ui->tableView_6->setModel(model);
-    ui->tableView_6->resizeColumnsToContents();
-    ui->tableView_6->resizeRowsToContents();
+    ui->tabelaArtikala->setModel(model);
+    ui->tabelaArtikala->resizeColumnsToContents();
+    ui->tabelaArtikala->resizeRowsToContents();
 }
 
-void FormaPopis::on_tableView_6_doubleClicked(const QModelIndex &index)
+void FormaPopis::on_tabelaArtikala_doubleClicked(const QModelIndex &index)
 {
-    ui->lineEdit_29->setFocus();
+    ui->sifra->setFocus();
     int row = index.row();
-    ui->lineEdit_29->setText(index.sibling(row, 0).data().toString());
+    ui->sifra->setText(index.sibling(row, 0).data().toString());
 
-    on_lineEdit_29_returnPressed();
+    on_sifra_returnPressed();
 }
 
 void FormaPopis::suma()
 {
     QSqlQuery query;
     query.prepare("SELECT Ukupno FROM PopisPodaci WHERE brpopisa = :brpopisa");
-    query.bindValue(":brpopisa",ui->spinBox->value());
+    query.bindValue(":brpopisa",ui->brojPopisa1->value());
     query.exec();
     double suma = 0;
     while(query.next())
@@ -189,51 +189,51 @@ void FormaPopis::suma()
     }
     QString pomS=QString::number(suma,'.',2);
     pomS.replace('.',',');
-    ui->label_40->setText(pomS);
+    ui->ukupnaVrednost->setText(pomS);
 }
 
-void FormaPopis::on_lineEdit_26_returnPressed()
+void FormaPopis::on_kolicina_returnPressed()
 {
     QSqlQuery query;
     query.prepare("UPDATE PopisPodaci SET Kolicina=:kol, Ukupno=:sum WHERE SifraProizvoda=:id AND brpopisa = :brpopisa");
-    query.bindValue(":kol",ui->lineEdit_26->text().replace('.',','));
-    double pom=ui->lineEdit_26->text().toDouble()*ui->lineEdit_27->text().toDouble();
+    query.bindValue(":kol",ui->kolicina->text().replace('.',','));
+    double pom=ui->kolicina->text().toDouble()*ui->cena->text().toDouble();
     QString pomS=QString::number(pom,'.',2);
     pomS.replace('.',',');
-    ui->lineEdit_28->setText(pomS);
-    query.bindValue(":sum",ui->lineEdit_28->text());
+    ui->suma->setText(pomS);
+    query.bindValue(":sum",ui->suma->text());
     pomS.replace(',','.');
-    ui->lineEdit_28->setText(pomS);
-    query.bindValue(":id",ui->lineEdit_29->text().toInt());
-    query.bindValue(":brpopisa",ui->spinBox->value());
-    if(query.exec()&&kol!=ui->lineEdit_26->text())
+    ui->suma->setText(pomS);
+    query.bindValue(":id",ui->sifra->text().toInt());
+    query.bindValue(":brpopisa",ui->brojPopisa1->value());
+    if(query.exec()&&kol!=ui->kolicina->text())
     {
-        ui->listWidget_6->addItem(ui->lineEdit_29->text()+". "+ui->lineEdit_30->text()+" Količina:"+kol+"->"+ui->lineEdit_26->text());
-        kol=ui->lineEdit_26->text();
+        ui->izmenePrikaz->addItem(ui->sifra->text()+". "+ui->naziv->text()+" Količina:"+kol+"->"+ui->kolicina->text());
+        kol=ui->kolicina->text();
     }
     QKeyEvent *event = new QKeyEvent ( QEvent::KeyPress, Qt::Key_Tab, Qt::NoModifier);
     QCoreApplication::postEvent (this, event);
     suma();
-    osvezi(ui->lineEdit_29->text().toInt());
+    osvezi(ui->sifra->text().toInt());
 }
 
-void FormaPopis::on_lineEdit_27_returnPressed()
+void FormaPopis::on_cena_returnPressed()
 {
-    if(ui->lineEdit_27->isModified())
+    if(ui->cena->isModified())
     {
         QSqlQuery query;
         query.prepare("UPDATE PopisPodaci SET ProdajnaCena=:cena WHERE Sifra=:id AND BrPopisa=:brpopisa");
-        QString pomS=QString::number(ui->lineEdit_27->text().toDouble(),'.',2);
+        QString pomS=QString::number(ui->cena->text().toDouble(),'.',2);
         pomS.replace('.',',');
         query.bindValue(":cena",pomS);
-        query.bindValue(":id",ui->lineEdit_29->text().toInt());
-        query.bindValue(":brpopisa",ui->spinBox->value());
+        query.bindValue(":id",ui->sifra->text().toInt());
+        query.bindValue(":brpopisa",ui->brojPopisa1->value());
         if(query.exec())
         {
-            ui->listWidget_6->addItem(ui->lineEdit_29->text()+". "+ui->lineEdit_30->text()+" Cena:"+cena+"->"+ui->lineEdit_27->text());
-            cena=ui->lineEdit_27->text();
+            ui->izmenePrikaz->addItem(ui->sifra->text()+". "+ui->naziv->text()+" Cena:"+cena+"->"+ui->cena->text());
+            cena=ui->cena->text();
         }
-        on_lineEdit_26_returnPressed();
+        on_kolicina_returnPressed();
     }
     else
     {

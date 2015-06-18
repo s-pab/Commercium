@@ -31,7 +31,7 @@
            <item row="0" column="0">
             <layout class="QGridLayout" name="gridLayout_26">
              <item row="0" column="1">
-              <widget class="QLineEdit" name="lineEdit_29">
+              <widget class="QLineEdit" name="sifra">
                <property name="minimumSize">
                 <size>
                  <width>130</width>
@@ -67,7 +67,7 @@ background-color: rgb(255, 255, 255);</string>
               </widget>
              </item>
              <item row="0" column="3">
-              <widget class="QLineEdit" name="lineEdit_30">
+              <widget class="QLineEdit" name="naziv">
                <property name="enabled">
                 <bool>true</bool>
                </property>
@@ -152,7 +152,7 @@ background-color: rgb(255, 255, 255);</string>
                   </spacer>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_26">
+                  <widget class="QLineEdit" name="kolicina">
                    <property name="minimumSize">
                     <size>
                      <width>120</width>
@@ -208,7 +208,7 @@ background-color: rgb(255, 255, 255);</string>
                   </spacer>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_27">
+                  <widget class="QLineEdit" name="cena">
                    <property name="minimumSize">
                     <size>
                      <width>120</width>
@@ -264,7 +264,7 @@ background-color: rgb(255, 255, 255);</string>
                   </spacer>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_28">
+                  <widget class="QLineEdit" name="suma">
                    <property name="minimumSize">
                     <size>
                      <width>120</width>
@@ -292,7 +292,7 @@ background-color: rgb(255, 255, 255);</string>
                 </layout>
                </item>
                <item row="3" column="0">
-                <widget class="QListWidget" name="listWidget_6">
+                <widget class="QListWidget" name="izmenePrikaz">
                  <property name="minimumSize">
                   <size>
                    <width>267</width>
@@ -334,7 +334,7 @@ background-color: rgb(255, 255, 255);</string>
              <item row="0" column="1">
               <layout class="QGridLayout" name="gridLayout_25">
                <item row="0" column="0">
-                <widget class="QTableView" name="tableView_6">
+                <widget class="QTableView" name="tabelaArtikala">
                  <property name="minimumSize">
                   <size>
                    <width>470</width>
@@ -353,7 +353,7 @@ background-color: rgb(255, 255, 255);</string>
                <item row="1" column="0">
                 <layout class="QHBoxLayout" name="horizontalLayout_25" stretch="0,1">
                  <item>
-                  <widget class="QLabel" name="label_39">
+                  <widget class="QLabel" name="ukupno">
                    <property name="font">
                     <font>
                      <family>Times New Roman</family>
@@ -369,7 +369,7 @@ background-color: rgb(255, 255, 255);</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="label_40">
+                  <widget class="QLabel" name="ukupnaVrednost">
                    <property name="minimumSize">
                     <size>
                      <width>310</width>
@@ -440,7 +440,7 @@ background-color: rgb(255, 255, 255);</string>
             </widget>
            </item>
            <item>
-            <widget class="QSpinBox" name="spinBox"/>
+            <widget class="QSpinBox" name="brojPopisa1"/>
            </item>
           </layout>
          </item>
@@ -460,14 +460,14 @@ background-color: rgb(255, 255, 255);</string>
             </widget>
            </item>
            <item>
-            <widget class="QDateEdit" name="dateEdit"/>
+            <widget class="QDateEdit" name="datumPopisa"/>
            </item>
           </layout>
          </item>
          <item>
           <layout class="QVBoxLayout" name="verticalLayout_3">
            <item>
-            <widget class="QPushButton" name="pushButton">
+            <widget class="QPushButton" name="noviPopis">
              <property name="text">
               <string>Napravi novi popis</string>
              </property>
@@ -497,12 +497,12 @@ background-color: rgb(255, 255, 255);</string>
               </widget>
              </item>
              <item>
-              <widget class="QSpinBox" name="spinBox_2"/>
+              <widget class="QSpinBox" name="brojPopisa2"/>
              </item>
             </layout>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_2">
+            <widget class="QPushButton" name="azuriranjePopisa">
              <property name="text">
               <string>Ažuriraj stari popis</string>
              </property>
@@ -528,12 +528,12 @@ background-color: rgb(255, 255, 255);</string>
               </widget>
              </item>
              <item>
-              <widget class="QSpinBox" name="spinBox_5"/>
+              <widget class="QSpinBox" name="brojPopisa3"/>
              </item>
             </layout>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_4">
+            <widget class="QPushButton" name="brisanjePopisa">
              <property name="text">
               <string>Brisanje popisa</string>
              </property>

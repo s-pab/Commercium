@@ -18,19 +18,19 @@ public:
 private slots:
     void suma();
     void osvezi(int sif);
-    void on_pushButton_clicked();
+    void on_noviPopis_clicked();
 
-    void on_lineEdit_29_returnPressed();
+    void on_sifra_returnPressed();
 
-    void on_pushButton_2_clicked();
+    void on_azuriranjePopisa_clicked();
 
-    void on_lineEdit_30_textChanged(const QString &arg1);
+    void on_naziv_textChanged(const QString &arg1);
 
-    void on_tableView_6_doubleClicked(const QModelIndex &index);
+    void on_tabelaArtikala_doubleClicked(const QModelIndex &index);
 
-    void on_lineEdit_26_returnPressed();
+    void on_kolicina_returnPressed();
 
-    void on_lineEdit_27_returnPressed();
+    void on_cena_returnPressed();
 
 private:
     Ui::FormaPopis *ui;
