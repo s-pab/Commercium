@@ -208,7 +208,7 @@ void FormaPopis::on_kolicina_returnPressed()
     query.bindValue(":brpopisa",ui->brojPopisa1->value());
     if(query.exec()&&kol!=ui->kolicina->text())
     {
-        ui->izmenePrikaz->addItem(ui->sifra->text()+". "+ui->naziv->text()+" Količina:"+kol+"->"+ui->kolicina->text());
+        ui->izmenePrikaz->addItem(ui->sifra->text()+". "+ui->naziv->text()+" Količina: "+kol+"->"+ui->kolicina->text());
         kol=ui->kolicina->text();
     }
     QKeyEvent *event = new QKeyEvent ( QEvent::KeyPress, Qt::Key_Tab, Qt::NoModifier);

@@ -13,6 +13,8 @@ class FormaFaktura : public QMainWindow
 
 public:
     explicit FormaFaktura(QWidget *parent = 0);
+    void pretraga(QString naziv);
+    void osvezi();
     ~FormaFaktura();
 
 private slots:
@@ -20,6 +22,10 @@ private slots:
     void on_obrisi_clicked();
 
     void on_nova_clicked();
+
+    void on_lePretraga_textChanged(const QString &arg1);
+
+    void on_pbUbaci_clicked();
 
 private:
     Ui::FormaFaktura *ui;
