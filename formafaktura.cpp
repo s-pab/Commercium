@@ -19,6 +19,7 @@ FormaFaktura::FormaFaktura(QWidget *parent) :
 {
     ui->setupUi(this);
     pretraga("");
+
 }
 
 FormaFaktura::~FormaFaktura()
@@ -133,4 +134,17 @@ void FormaFaktura::osvezi()
     ui->prikaz->setModel(model);
     ui->prikaz->resizeColumnsToContents();
     ui->prikaz->resizeRowsToContents();
+}
+
+void FormaFaktura::on_kupac_textChanged(const QString &arg1)
+{
+    QSqlQuery query;
+    query.prepare("SELECT sifra,naziv,ulica,mesto,pib,tekuciRacun FROM Komitenti WHERE naziv LIKE '%'+?+'%'");
+    query.addBindValue(arg1);
+    query.exec();
+    QSqlQueryModel* model = new QSqlQueryModel(this);
+    model->setQuery(query);
+    ui->twKupac->setModel(model);
+    ui->twKupac->resizeColumnsToContents();
+    ui->twKupac->resizeRowsToContents();
 }

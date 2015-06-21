@@ -2,6 +2,7 @@
 #define FORMAFAKTURA_H
 
 #include <QMainWindow>
+#include <QCompleter>
 
 namespace Ui {
 class FormaFaktura;
@@ -27,8 +28,11 @@ private slots:
 
     void on_pbUbaci_clicked();
 
+    void on_kupac_textChanged(const QString &arg1);
+
 private:
     Ui::FormaFaktura *ui;
+    QCompleter *completer;
 };
 
 #endif // FORMAFAKTURA_H
