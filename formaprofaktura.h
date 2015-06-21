@@ -29,7 +29,10 @@ private slots:
 
     void on_ubaciArtikl_clicked();
 
-    void on_kupac_textChanged(const QString &arg1);
+
+    void on_pretragaKupaca_textChanged(const QString &arg1);
+
+    void on_ubaciKupca_clicked();
 
 private:
     Ui::FormaProfaktura *ui;

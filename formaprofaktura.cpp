@@ -123,8 +123,6 @@ void FormaProfaktura::on_ubaciArtikl_clicked()
     ui->mesto->setText(index.sibling(row,3).data().toString());
     ui->pib->setText(index.sibling(row,4).data().toString());
     ui->tekuciracun->setText(index.sibling(row,5).data().toString());*/
-
-
     query2.prepare("INSERT INTO ProfakturePodaci (SIFRAPROIZVODA,NAZIVPROIZVODA,PRODAJNACENA,KOLICINA,brProfakture) VALUES (:SIFRA,:NAZIV,:CENA,:KOLICINA,:brProfakture)");
     query2.bindValue(":SIFRA",index.sibling(row,0).data().toInt());
     query2.bindValue(":NAZIV",index.sibling(row,1).data().toString());
@@ -135,15 +133,29 @@ void FormaProfaktura::on_ubaciArtikl_clicked()
     osvezi();
 }
 
-void FormaProfaktura::on_kupac_textChanged(const QString &arg1)
+
+void FormaProfaktura::on_pretragaKupaca_textChanged(const QString &arg1)
 {
+
     QSqlQuery query;
     query.prepare("SELECT sifra,naziv,ulica,mesto,pib,tekuciRacun FROM Komitenti WHERE naziv LIKE '%'+?+'%'");
     query.addBindValue(arg1);
     query.exec();
     QSqlQueryModel* model = new QSqlQueryModel(this);
     model->setQuery(query);
+    ui->twKupac->verticalHeader()->hide();
+    ui->twKupac->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->twKupac->setModel(model);
     ui->twKupac->resizeColumnsToContents();
     ui->twKupac->resizeRowsToContents();
+}
+
+void FormaProfaktura::on_ubaciKupca_clicked()
+{
+    QModelIndex index = ui->twKupac->currentIndex();
+    int row = index.row();
+    ui->sifraKupca->setText(index.sibling(row,0).data().toString());
+    ui->kupac->setText(index.sibling(row,1).data().toString());
+    ui->mesto->setText(index.sibling(row,3).data().toString());
+    ui->PIB->setText(index.sibling(row,4).data().toString());
 }
