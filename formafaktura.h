@@ -32,6 +32,8 @@ private slots:
 
     void on_pbUbaciKupca_clicked();
 
+    void on_izmeni_clicked();
+
 private:
     Ui::FormaFaktura *ui;
     QCompleter *completer;
