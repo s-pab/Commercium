@@ -21,7 +21,7 @@ private slots:
 
     void on_obrisi_clicked();
 
-   // void on_nova_clicked();
+    void on_nova_clicked();
 
     void on_lePretraga_textChanged(const QString &arg1);
 

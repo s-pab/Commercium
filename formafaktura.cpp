@@ -32,7 +32,7 @@ void FormaFaktura::on_obrisi_clicked()
 
 }
 
-/*void FormaFaktura::on_nova_clicked()
+void FormaFaktura::on_nova_clicked()
 {
     QSqlQuery query;
     QSqlQuery query2;
@@ -73,7 +73,7 @@ void FormaFaktura::on_obrisi_clicked()
         ui->prikaz->resizeColumnsToContents();
         ui->prikaz->resizeRowsToContents();
     }
-}*/
+}
 
 void FormaFaktura::pretraga(QString naziv)
 {
