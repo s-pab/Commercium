@@ -15,8 +15,5 @@ FormaOtpremnica::~FormaOtpremnica()
 
 void FormaOtpremnica::on_obrisi_clicked()
 {
-    ui->brojOtpremnice->clear();
-    ui->tabelaOtpremnica->clearFocus();
-    ui->tabelaPosiljalac->clearFocus();
-    ui->tabelaPrimalac->clearFocus();
+
 }
