@@ -322,7 +322,7 @@
               <widget class="QLineEdit" name="pretragaKupaca"/>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton">
+              <widget class="QPushButton" name="ubaciKupca">
                <property name="text">
                 <string>Ubaci Kupca</string>
                </property>
@@ -331,7 +331,7 @@
             </layout>
            </item>
            <item>
-            <widget class="QTableView" name="tw"/>
+            <widget class="QTableView" name="twKupac"/>
            </item>
           </layout>
          </item>

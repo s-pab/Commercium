@@ -112,7 +112,7 @@ void FormaProfaktura::osvezi()
     ui->prikaz->resizeRowsToContents();
 }
 
-void FormaProfaktura::on_ubaci_clicked()
+void FormaProfaktura::on_ubaciArtikl_clicked()
 {
     QSqlQuery query2;
     QModelIndex index = ui->twArtikli->currentIndex();
@@ -133,4 +133,17 @@ void FormaProfaktura::on_ubaci_clicked()
     query2.bindValue(":brProfakture",ui->brojPredracuna->text().toInt());
     query2.exec();
     osvezi();
+}
+
+void FormaProfaktura::on_kupac_textChanged(const QString &arg1)
+{
+    QSqlQuery query;
+    query.prepare("SELECT sifra,naziv,ulica,mesto,pib,tekuciRacun FROM Komitenti WHERE naziv LIKE '%'+?+'%'");
+    query.addBindValue(arg1);
+    query.exec();
+    QSqlQueryModel* model = new QSqlQueryModel(this);
+    model->setQuery(query);
+    ui->twKupac->setModel(model);
+    ui->twKupac->resizeColumnsToContents();
+    ui->twKupac->resizeRowsToContents();
 }

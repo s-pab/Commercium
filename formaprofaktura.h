@@ -27,7 +27,9 @@ private slots:
 
     void on_pretraga_textChanged(const QString &arg1);
 
-    void on_ubaci_clicked();
+    void on_ubaciArtikl_clicked();
+
+    void on_kupac_textChanged(const QString &arg1);
 
 private:
     Ui::FormaProfaktura *ui;
