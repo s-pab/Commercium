@@ -28,7 +28,9 @@ private slots:
 
     void on_pbUbaci_clicked();
 
-    void on_kupac_textChanged(const QString &arg1);
+    void on_leKupacPretraga_textChanged(const QString &arg1);
+
+    void on_pbUbaciKupca_clicked();
 
 private:
     Ui::FormaFaktura *ui;

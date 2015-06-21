@@ -89,6 +89,8 @@ void FormaFaktura::pretraga(QString naziv)
     query.exec();
     QSqlQueryModel* model = new QSqlQueryModel(this);
     model->setQuery(query);
+    ui->twArtikli->verticalHeader()->hide();
+    ui->twArtikli->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->twArtikli->setModel(model);
     ui->twArtikli->resizeColumnsToContents();
     ui->twArtikli->resizeRowsToContents();
@@ -131,12 +133,14 @@ void FormaFaktura::osvezi()
     query.exec();
     QSqlQueryModel* model = new QSqlQueryModel(this);
     model->setQuery(query);
+    ui->prikaz->verticalHeader()->hide();
+    ui->prikaz->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->prikaz->setModel(model);
     ui->prikaz->resizeColumnsToContents();
     ui->prikaz->resizeRowsToContents();
 }
 
-void FormaFaktura::on_kupac_textChanged(const QString &arg1)
+void FormaFaktura::on_leKupacPretraga_textChanged(const QString &arg1)
 {
     QSqlQuery query;
     query.prepare("SELECT sifra,naziv,ulica,mesto,pib,tekuciRacun FROM Komitenti WHERE naziv LIKE '%'+?+'%'");
@@ -144,7 +148,23 @@ void FormaFaktura::on_kupac_textChanged(const QString &arg1)
     query.exec();
     QSqlQueryModel* model = new QSqlQueryModel(this);
     model->setQuery(query);
+    ui->twKupac->verticalHeader()->hide();
+    ui->twKupac->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->twKupac->setModel(model);
     ui->twKupac->resizeColumnsToContents();
     ui->twKupac->resizeRowsToContents();
+}
+
+void FormaFaktura::on_pbUbaciKupca_clicked()
+{
+    QModelIndex index = ui->twKupac->currentIndex();
+    int row = index.row();
+    ui->sifra->setText(index.sibling(row,0).data().toString());
+    ui->kupac->setText(index.sibling(row,1).data().toString());
+    ui->mesto->setText(index.sibling(row,3).data().toString());
+    ui->PIB->setText(index.sibling(row,4).data().toString());
+
+
+    //query2.bindValue(":SIFRA",index.sibling(row,0).data().toInt());
+
 }
