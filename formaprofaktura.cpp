@@ -164,3 +164,47 @@ void FormaProfaktura::on_pretragaArtikl_textChanged(const QString &arg1)
 {
     pretraga(arg1);
 }
+
+void FormaProfaktura::on_izmeni_clicked()
+{
+    QSqlQuery query;
+    QSqlQuery query2;
+    bool postoji = false;
+    query.exec("SELECT sifraProfakture FROM ProfaktureOsnovno");
+    if(ui->brojPredracuna->text()!="")
+    while(query.next())
+    {
+        if(query.value(0).toInt() == ui->brojPredracuna->text().toInt())
+        {
+            postoji=true;
+            break;
+        }
+    }
+    else
+        postoji=false;
+    if(!postoji)
+    {
+        QMessageBox msg;
+        msg.setText("Nepostojeća profaktura");
+        msg.setWindowTitle("Greška");
+        msg.addButton(QMessageBox::Ok);
+        msg.exec();
+    }
+    else
+    {
+        query.prepare("INSERT INTO ProfaktureOsnovno (sifraProfakture,datum,valuta) VALUES (:SIFRA,:DATUM,:VALUTA)");
+        query.bindValue(":SIFRA",ui->brojPredracuna->text().toInt());
+        QDate Datum = ui->datumPredracuna->date();
+        query.bindValue(":DATUM",Datum);
+        query.bindValue(":VALUTA",ui->valuta->text().toInt());
+        query.exec();
+        query.prepare("SELECT SifraProizvoda,NazivProizvoda,ProdajnaCena,Kolicina,Ukupno FROM ProfakturePodaci WHERE brProfakture = :brProfakture");
+        query.bindValue(":brProfakture",ui->brojPredracuna->text().toInt());
+        query.exec();
+        QSqlQueryModel* model = new QSqlQueryModel(this);
+        model->setQuery(query);
+        ui->prikaz->setModel(model);
+        ui->prikaz->resizeColumnsToContents();
+        ui->prikaz->resizeRowsToContents();
+    }
+}
