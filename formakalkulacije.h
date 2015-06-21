@@ -25,6 +25,14 @@ private slots:
 
     void on_ubaciArtikl_clicked();
 
+    void on_azuriranje_clicked();
+
+    void on_brisanje_clicked();
+
+    void on_nova_clicked();
+
+    void osvezi();
+
 private:
     Ui::FormaKalkulacije *ui;
 };

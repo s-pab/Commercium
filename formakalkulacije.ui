@@ -253,7 +253,7 @@
               </layout>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_7">
+              <widget class="QPushButton" name="nova">
                <property name="text">
                 <string>Napravi novu kalkulaciju</string>
                </property>
@@ -315,6 +315,13 @@
                   <widget class="QLineEdit" name="kolicina"/>
                  </item>
                 </layout>
+               </item>
+               <item>
+                <widget class="QPushButton" name="ubaci">
+                 <property name="text">
+                  <string>Ubaci</string>
+                 </property>
+                </widget>
                </item>
               </layout>
              </item>

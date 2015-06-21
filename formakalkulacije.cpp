@@ -29,7 +29,10 @@ FormaKalkulacije::~FormaKalkulacije()
 
 void FormaKalkulacije::on_ubaciKupca_clicked()
 {
-
+    QModelIndex kupac = ui->twKupac->currentIndex();
+    int red = kupac.row();
+    ui->komitentS->setValue(kupac.sibling(red,0).data().toInt());
+    ui->komitentN->setText(kupac.sibling(red,1).data().toString());
 }
 
 void FormaKalkulacije::on_pretragaKupaca_textChanged(const QString &arg1)
@@ -74,4 +77,36 @@ void FormaKalkulacije::on_ubaciArtikl_clicked()
     int red = artikl.row();
     ui->sifra->setText(artikl.sibling(red,0).data().toString());
     ui->naziv->setText(artikl.sibling(red,1).data().toString());
+}
+
+
+void FormaKalkulacije::on_azuriranje_clicked()
+{
+
+}
+
+void FormaKalkulacije::on_brisanje_clicked()
+{
+
+}
+
+void FormaKalkulacije::on_nova_clicked()
+{
+
+}
+
+void FormaKalkulacije::osvezi()
+{
+    QSqlQuery query;
+    //query.prepare("SELECT SifraProizvoda,NazivProizvoda,ProdajnaCena,Kolicina,Ukupno FROM FakturePodaci WHERE brFakture = :brf");
+    query.prepare("SELECT * FROM KalkulacijePodaci WHERE brKalkulacije = :brk");
+    query.bindValue(":brk",ui->broj->text().toInt());
+    query.exec();
+    QSqlQueryModel* model = new QSqlQueryModel(this);
+    model->setQuery(query);
+    //ui->prikaz->verticalHeader()->hide();
+    ui->prikaz->setSelectionBehavior(QAbstractItemView::SelectRows);
+    ui->prikaz->setModel(model);
+    //ui->prikaz->resizeColumnsToContents();
+    //ui->prikaz->resizeRowsToContents();
 }
