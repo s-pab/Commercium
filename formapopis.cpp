@@ -69,6 +69,8 @@ void FormaPopis::on_noviPopis_clicked()
         query.exec();
         QSqlQueryModel* model = new QSqlQueryModel(this);
         model->setQuery(query);
+        ui->tabelaArtikala->verticalHeader()->hide();
+        ui->tabelaArtikala->setSelectionBehavior(QAbstractItemView::SelectRows);
         ui->tabelaArtikala->setModel(model);
         ui->tabelaArtikala->resizeColumnsToContents();
         ui->tabelaArtikala->resizeRowsToContents();
@@ -130,6 +132,8 @@ void FormaPopis::on_azuriranjePopisa_clicked()
         query.exec();
         QSqlQueryModel* model = new QSqlQueryModel(this);
         model->setQuery(query);
+        ui->tabelaArtikala->verticalHeader()->hide();
+        ui->tabelaArtikala->setSelectionBehavior(QAbstractItemView::SelectRows);
         ui->tabelaArtikala->setModel(model);
         ui->tabelaArtikala->resizeColumnsToContents();
         ui->tabelaArtikala->resizeRowsToContents();
@@ -148,6 +152,8 @@ void FormaPopis::osvezi(int sif)
     query.exec();
     QSqlQueryModel* model = new QSqlQueryModel(this);
     model->setQuery(query);
+    ui->tabelaArtikala->verticalHeader()->hide();
+    ui->tabelaArtikala->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->tabelaArtikala->setModel(model);
     ui->tabelaArtikala->resizeColumnsToContents();
     ui->tabelaArtikala->resizeRowsToContents();
@@ -162,6 +168,8 @@ void FormaPopis::on_naziv_textChanged(const QString &arg1)
     query.exec();
     QSqlQueryModel* model = new QSqlQueryModel(this);
     model->setQuery(query);
+    ui->tabelaArtikala->verticalHeader()->hide();
+    ui->tabelaArtikala->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->tabelaArtikala->setModel(model);
     ui->tabelaArtikala->resizeColumnsToContents();
     ui->tabelaArtikala->resizeRowsToContents();
