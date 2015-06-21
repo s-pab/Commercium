@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1060</width>
+    <width>1412</width>
     <height>753</height>
    </rect>
   </property>
@@ -21,34 +21,100 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <layout class="QVBoxLayout" name="verticalLayout_8">
+    <item row="0" column="1">
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1">
       <item>
-       <widget class="QGroupBox" name="groupBox">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>110</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777169</width>
-          <height>132</height>
-         </size>
-        </property>
-        <property name="title">
-         <string>Otvaranje, ažuriranje i brisanje kalkulacije</string>
-        </property>
-        <layout class="QGridLayout" name="gridLayout_30">
-         <item row="1" column="0">
-          <layout class="QHBoxLayout" name="horizontalLayout_11">
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_2">
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>110</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777169</width>
+            <height>132</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Otvaranje, ažuriranje i brisanje kalkulacije</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_30">
+           <item row="1" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_11">
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_12">
+              <layout class="QVBoxLayout" name="verticalLayout_2">
                <item>
-                <widget class="QLabel" name="label_49">
+                <layout class="QHBoxLayout" name="horizontalLayout_12">
+                 <item>
+                  <widget class="QLabel" name="label_49">
+                   <property name="maximumSize">
+                    <size>
+                     <width>78</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Broj kalkulacije:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="brAzuriranja"/>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="azuriranje">
+                   <property name="text">
+                    <string>Ažuriraj staru kalkulaciju</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_6">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_13">
+                 <item>
+                  <widget class="QLabel" name="label_50">
+                   <property name="maximumSize">
+                    <size>
+                     <width>76</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Broj kalkulacije:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="brBrisanje"/>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="brisanje">
+                   <property name="text">
+                    <string>Obriši staru kalkulaciju</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item row="0" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="1,1,1,1,1,1">
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout">
+               <item>
+                <widget class="QLabel" name="label_46">
                  <property name="maximumSize">
                   <size>
                    <width>78</width>
@@ -61,310 +127,310 @@
                 </widget>
                </item>
                <item>
-                <widget class="QSpinBox" name="brAzuriranja"/>
-               </item>
-               <item>
-                <widget class="QPushButton" name="azuriranje">
-                 <property name="text">
-                  <string>Ažuriraj staru kalkulaciju</string>
+                <widget class="QSpinBox" name="broj">
+                 <property name="minimumSize">
+                  <size>
+                   <width>75</width>
+                   <height>0</height>
+                  </size>
                  </property>
                 </widget>
                </item>
               </layout>
              </item>
-            </layout>
-           </item>
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_6">
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_13">
+              <layout class="QVBoxLayout" name="verticalLayout_3">
                <item>
-                <widget class="QLabel" name="label_50">
+                <widget class="QLabel" name="label_47">
                  <property name="maximumSize">
                   <size>
-                   <width>76</width>
+                   <width>89</width>
                    <height>16777215</height>
                   </size>
                  </property>
                  <property name="text">
-                  <string>Broj kalkulacije:</string>
+                  <string>Datum kalkulacije:</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QSpinBox" name="brBrisanje"/>
+                <widget class="QDateEdit" name="datum">
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                </widget>
                </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_5">
                <item>
-                <widget class="QPushButton" name="brisanje">
+                <widget class="QLabel" name="label_48">
+                 <property name="maximumSize">
+                  <size>
+                   <width>89</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
                  <property name="text">
-                  <string>Obriši staru kalkulaciju</string>
+                  <string>Šifra komitenta:</string>
                  </property>
                 </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="komitentS">
+                 <property name="minimumSize">
+                  <size>
+                   <width>75</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <item>
+                <widget class="QLabel" name="label_5">
+                 <property name="maximumSize">
+                  <size>
+                   <width>85</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Naziv komitenta:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="komitentN">
+                 <property name="minimumSize">
+                  <size>
+                   <width>200</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>200</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_7">
+               <item>
+                <widget class="QLabel" name="label_6">
+                 <property name="text">
+                  <string>Broj otpremnice/računa:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="brOtpremnice">
+                 <property name="minimumSize">
+                  <size>
+                   <width>200</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>200</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_7">
+               <property name="text">
+                <string>Napravi novu kalkulaciju</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="title">
+           <string>Obrada trenutne kalkulacije</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0">
+            <layout class="QVBoxLayout" name="verticalLayout_12">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_9">
+                 <item>
+                  <widget class="QLabel" name="label">
+                   <property name="text">
+                    <string>Šifra</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="sifra"/>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_10">
+                 <item>
+                  <widget class="QLabel" name="label_2">
+                   <property name="text">
+                    <string>Naziv</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="naziv"/>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_11">
+                 <item>
+                  <widget class="QLabel" name="label_3">
+                   <property name="text">
+                    <string>Količina</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="kolicina"/>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QListView" name="prikaz"/>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <item>
+                <spacer name="horizontalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>400</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_4">
+                 <property name="text">
+                  <string>UKUPNO:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="ukupno1"/>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="ukupno2"/>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="ukupno3"/>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="ukupno4"/>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="ukupno5"/>
                </item>
               </layout>
              </item>
             </layout>
            </item>
           </layout>
-         </item>
-         <item row="0" column="0">
-          <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="1,1,1,1,1,1">
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout">
-             <item>
-              <widget class="QLabel" name="label_46">
-               <property name="maximumSize">
-                <size>
-                 <width>78</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>Broj kalkulacije:</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QSpinBox" name="broj">
-               <property name="minimumSize">
-                <size>
-                 <width>75</width>
-                 <height>0</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_3">
-             <item>
-              <widget class="QLabel" name="label_47">
-               <property name="maximumSize">
-                <size>
-                 <width>89</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>Datum kalkulacije:</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QDateEdit" name="datum">
-               <property name="minimumSize">
-                <size>
-                 <width>100</width>
-                 <height>0</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_5">
-             <item>
-              <widget class="QLabel" name="label_48">
-               <property name="maximumSize">
-                <size>
-                 <width>89</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>Šifra komitenta:</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QSpinBox" name="komitentS">
-               <property name="minimumSize">
-                <size>
-                 <width>75</width>
-                 <height>0</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_4">
-             <item>
-              <widget class="QLabel" name="label_5">
-               <property name="maximumSize">
-                <size>
-                 <width>85</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>Naziv komitenta:</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="komitentN">
-               <property name="minimumSize">
-                <size>
-                 <width>200</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>200</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_7">
-             <item>
-              <widget class="QLabel" name="label_6">
-               <property name="text">
-                <string>Broj otpremnice/računa:</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="brOtpremnice">
-               <property name="minimumSize">
-                <size>
-                 <width>200</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>200</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_7">
-             <property name="text">
-              <string>Napravi novu kalkulaciju</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </widget>
+         </widget>
+        </item>
+       </layout>
       </item>
       <item>
-       <widget class="QGroupBox" name="groupBox_2">
-        <property name="title">
-         <string>Obrada trenutne kalkulacije</string>
-        </property>
-        <layout class="QGridLayout" name="gridLayout_2">
-         <item row="0" column="0">
-          <layout class="QVBoxLayout" name="verticalLayout_12">
-           <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <layout class="QVBoxLayout" name="verticalLayout_13" stretch="1,1">
+        <item>
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="title">
+           <string>Prikaz informacija o kupcima i njihova pretraga</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
              <item>
-              <layout class="QVBoxLayout" name="verticalLayout_9">
-               <item>
-                <widget class="QLabel" name="label">
-                 <property name="text">
-                  <string>Šifra</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="sifra"/>
-               </item>
-              </layout>
+              <widget class="QLineEdit" name="pretragaKupaca"/>
              </item>
              <item>
-              <layout class="QVBoxLayout" name="verticalLayout_10">
-               <item>
-                <widget class="QLabel" name="label_2">
-                 <property name="text">
-                  <string>Naziv</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="naziv"/>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <layout class="QVBoxLayout" name="verticalLayout_11">
-               <item>
-                <widget class="QLabel" name="label_3">
-                 <property name="text">
-                  <string>Količina</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="kolicina"/>
-               </item>
-              </layout>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <widget class="QListView" name="prikaz"/>
-           </item>
-           <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_2">
-             <item>
-              <spacer name="horizontalSpacer">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="sizeType">
-                <enum>QSizePolicy::Fixed</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>400</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item>
-              <widget class="QLabel" name="label_4">
+              <widget class="QPushButton" name="ubaciKupca">
                <property name="text">
-                <string>UKUPNO:</string>
+                <string>Ubaci Kupca</string>
                </property>
               </widget>
              </item>
+            </layout>
+           </item>
+           <item row="1" column="0">
+            <widget class="QTableView" name="twKupac"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_3">
+          <property name="title">
+           <string>Prikaz informacija o artiklima i njihova pretraga</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="0">
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
              <item>
-              <widget class="QLineEdit" name="ukupno1"/>
+              <widget class="QLineEdit" name="pretragaArtikl"/>
              </item>
              <item>
-              <widget class="QLineEdit" name="ukupno2"/>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="ukupno3"/>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="ukupno4"/>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="ukupno5"/>
+              <widget class="QPushButton" name="ubaciArtikl">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Ubaci Artikl</string>
+               </property>
+              </widget>
              </item>
             </layout>
            </item>
+           <item row="1" column="0">
+            <widget class="QTableView" name="twArtikli"/>
+           </item>
           </layout>
-         </item>
-        </layout>
-       </widget>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>
@@ -375,7 +441,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1060</width>
+     <width>1412</width>
      <height>21</height>
     </rect>
    </property>
