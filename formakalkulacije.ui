@@ -253,7 +253,7 @@
            <item>
             <widget class="QPushButton" name="pushButton_7">
              <property name="text">
-              <string>Napravi novi popis</string>
+              <string>Napravi novu kalkulaciju</string>
              </property>
             </widget>
            </item>

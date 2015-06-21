@@ -13,7 +13,4 @@ FormaKalkulacije::~FormaKalkulacije()
     delete ui;
 }
 
-void FormaKalkulacije::on_pushButton_3_clicked()
-{
 
-}
