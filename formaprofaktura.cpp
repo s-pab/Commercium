@@ -89,15 +89,13 @@ void FormaProfaktura::pretraga(QString naziv)
     query.exec();
     QSqlQueryModel* model = new QSqlQueryModel(this);
     model->setQuery(query);
+    ui->twArtikli->verticalHeader()->hide();
+    ui->twArtikli->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->twArtikli->setModel(model);
     ui->twArtikli->resizeColumnsToContents();
     ui->twArtikli->resizeRowsToContents();
 }
 
-void FormaProfaktura::on_pretraga_textChanged(const QString &arg1)
-{
-    pretraga(arg1);
-}
 
 void FormaProfaktura::osvezi()
 {
@@ -123,6 +121,8 @@ void FormaProfaktura::on_ubaciArtikl_clicked()
     ui->mesto->setText(index.sibling(row,3).data().toString());
     ui->pib->setText(index.sibling(row,4).data().toString());
     ui->tekuciracun->setText(index.sibling(row,5).data().toString());*/
+
+
     query2.prepare("INSERT INTO ProfakturePodaci (SIFRAPROIZVODA,NAZIVPROIZVODA,PRODAJNACENA,KOLICINA,brProfakture) VALUES (:SIFRA,:NAZIV,:CENA,:KOLICINA,:brProfakture)");
     query2.bindValue(":SIFRA",index.sibling(row,0).data().toInt());
     query2.bindValue(":NAZIV",index.sibling(row,1).data().toString());
@@ -158,4 +158,9 @@ void FormaProfaktura::on_ubaciKupca_clicked()
     ui->kupac->setText(index.sibling(row,1).data().toString());
     ui->mesto->setText(index.sibling(row,3).data().toString());
     ui->PIB->setText(index.sibling(row,4).data().toString());
+}
+
+void FormaProfaktura::on_pretragaArtikl_textChanged(const QString &arg1)
+{
+    pretraga(arg1);
 }

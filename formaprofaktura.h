@@ -23,16 +23,13 @@ private slots:
 
     void on_nova_clicked();
 
-
-
-    void on_pretraga_textChanged(const QString &arg1);
-
     void on_ubaciArtikl_clicked();
-
 
     void on_pretragaKupaca_textChanged(const QString &arg1);
 
     void on_ubaciKupca_clicked();
+
+    void on_pretragaArtikl_textChanged(const QString &arg1);
 
 private:
     Ui::FormaProfaktura *ui;
