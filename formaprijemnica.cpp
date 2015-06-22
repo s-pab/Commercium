@@ -15,8 +15,5 @@ FormaPrijemnica::~FormaPrijemnica()
 
 void FormaPrijemnica::on_obrisi_clicked()
 {
-    ui->brojPrijemnice->clear();
-    ui->tabelaPosiljalac->clearFocus();
-    ui->tabelaPrijemnica->clearFocus();
-    ui->tabelaPrimalac->clearFocus();
+
 }

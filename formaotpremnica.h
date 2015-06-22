@@ -29,6 +29,8 @@ private slots:
 
     void on_ubaciArtikl_clicked();
 
+    void on_izmeni_clicked();
+
 private:
     Ui::FormaOtpremnica *ui;
 };
