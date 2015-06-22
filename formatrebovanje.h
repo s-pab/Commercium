@@ -33,6 +33,8 @@ private slots:
 
     void on_ubaciArtikl_clicked();
 
+    void on_izbaciArtikl_clicked();
+
 private:
     Ui::FormaTrebovanje *ui;
 };
