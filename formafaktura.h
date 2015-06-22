@@ -34,6 +34,10 @@ private slots:
 
     void on_izmeni_clicked();
 
+    void on_pbUkloniArtikl_clicked();
+
+    void on_racunBroj_returnPressed();
+
 private:
     Ui::FormaFaktura *ui;
     QCompleter *completer;

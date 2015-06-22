@@ -270,10 +270,26 @@ void FormaFaktura::on_izmeni_clicked()
         query.prepare("SELECT SifraProizvoda,NazivProizvoda,ProdajnaCena,Kolicina FROM FakturePodaci WHERE brFakture = :brFakture");
         query.bindValue(":brFakture",ui->racunBroj->text().toInt());
         query.exec();
-        QSqlQueryModel* model = new QSqlQueryModel(this);
-        model->setQuery(query);
-        ui->prikaz->setModel(model);
-        ui->prikaz->resizeColumnsToContents();
-        ui->prikaz->resizeRowsToContents();
+        osvezi();
     }
+}
+
+void FormaFaktura::on_pbUkloniArtikl_clicked()
+{
+    QSqlQuery query;
+    QModelIndex index = ui->prikaz->currentIndex();
+    int row = index.row();
+    int sifra = index.sibling(row,0).data().toInt();
+
+    query.prepare("DELETE FROM FakturePodaci WHERE sifraProizvoda = :sp AND brFakture = :bf");
+    query.bindValue(":sp",sifra);
+    query.bindValue(":bf",ui->racunBroj->text().toInt());
+    query.exec();
+
+    osvezi();
+}
+
+void FormaFaktura::on_racunBroj_returnPressed()
+{
+    on_izmeni_clicked();
 }
