@@ -154,7 +154,7 @@ void FormaOtpremnica::on_izmeni_clicked()
     QSqlQuery query;
     QSqlQuery query2;
     bool postoji = false;
-    query.exec("SELECT brOtpremnice FROM OtpremnicaOsnovno");
+    query.exec("SELECT sifraOtpremnica FROM OtpremnicaOsnovno");
     if(ui->brojOtpremnice->text()!="")
     while(query.next())
     {
@@ -192,7 +192,7 @@ void FormaOtpremnica::on_izmeni_clicked()
             }
         }
 
-        query.prepare("SELECT SIFRAPROIZVODA,NAZIVPROIZVODA,PRODAJNACENA,JEDINICAMERE,KOLICINA,brOtpremnice from OtpremnicePodaci WHERE brOtpremnice=:brOtpremnice");
+        query.prepare("SELECT SIFRAPROIZVODA,NAZIVPROIZVODA,PRODAJNACENA,JEDINICAMERE,KOLICINA,brOtpremnice from OtpremnicaPodaci WHERE brOtpremnice=:brOtpremnice");
         query.bindValue(":brOtpremnice",ui->brojOtpremnice->text().toInt());
         query.exec();
         QSqlQueryModel* model = new QSqlQueryModel(this);
