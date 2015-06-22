@@ -299,7 +299,7 @@
          </layout>
         </item>
         <item>
-         <widget class="QTableWidget" name="prikazKomitenta">
+         <widget class="QTableView" name="prikazKomitenta">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -329,7 +329,7 @@
          </layout>
         </item>
         <item>
-         <widget class="QTableWidget" name="prikazArtikla">
+         <widget class="QTableView" name="prikazArtikla">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
             <horstretch>0</horstretch>

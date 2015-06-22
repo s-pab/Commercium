@@ -47,7 +47,7 @@ void FormaOtpremnica::pretraga(QString naziv)
         query.prepare("SELECT sifraProizvoda,nazivProizvoda,nabavnaCena,kolicina FROM Artikl");
     else
     {
-        query.prepare("SELECT SifraProizvoda,NazivProizvoda,ProdajnaCena,Kolicina,Ukupno FROM PopisPodaci WHERE NazivProizvoda LIKE '%'+?+'%'");
+        query.prepare("SELECT SifraProizvoda,NazivProizvoda,ProdajnaCena,Kolicina FROM Artikl WHERE NazivProizvoda LIKE '%'+?+'%'");
         query.addBindValue(naziv);
     }
     query.exec();
