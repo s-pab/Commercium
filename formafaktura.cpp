@@ -65,29 +65,23 @@ void FormaFaktura::on_nova_clicked()
     }
     if(postoji)
     {
-        QMessageBox msg;
-        msg.setText("Faktura pod tom šifrom već postoji");
-        msg.setWindowTitle("Greška");
-        msg.addButton(QMessageBox::Ok);
-        msg.exec();
-    }
-    else
-    {
-        query.prepare("INSERT INTO FaktureOsnovno (sifraFakture,datum,valuta) VALUES (:SIFRA,:DATUM,:VALUTA)");
+        query.prepare("UPDATE FaktureOsnovno (sifraFakture,datum,valuta,komitent) VALUES (:SIFRA,:DATUM,:VALUTA,:KOMITENT)");
         query.bindValue(":SIFRA",ui->racunBroj->text().toInt());
         QDate Datum = ui->datumPlacanja->date();
         query.bindValue(":DATUM",Datum);
         query.bindValue(":VALUTA",ui->valuta->text().toInt());
+        query.bindValue(":KOMITENT",ui->sifra->text().toInt());
         query.exec();
-     /* query.exec("SELECT SIFRAPROIZVODA,NAZIVPROIZVODA,PRODAJNACENA FROM Artikl");
-        query.prepare("SELECT SifraProizvoda,NazivProizvoda,ProdajnaCena,Kolicina,Ukupno FROM FakturePodaci WHERE brFakture = :brFakture");
-        query.bindValue(":brFakture",ui->racunBroj->text().toInt());
+    }
+    else
+    {
+        query.prepare("INSERT INTO FaktureOsnovno (sifraFakture,datum,valuta,komitent) VALUES (:SIFRA,:DATUM,:VALUTA,:KOMITENT)");
+        query.bindValue(":SIFRA",ui->racunBroj->text().toInt());
+        QDate Datum = ui->datumPlacanja->date();
+        query.bindValue(":DATUM",Datum);
+        query.bindValue(":VALUTA",ui->valuta->text().toInt());
+        query.bindValue(":KOMITENT",ui->sifra->text().toInt());
         query.exec();
-        QSqlQueryModel* model = new QSqlQueryModel(this);
-        model->setQuery(query);
-        ui->prikaz->setModel(model);
-        ui->prikaz->resizeColumnsToContents();
-        ui->prikaz->resizeRowsToContents();*/
     }
 }
 
