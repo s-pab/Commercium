@@ -12,9 +12,3 @@ FormaTrebovanje::~FormaTrebovanje()
 {
     delete ui;
 }
-
-void FormaTrebovanje::on_obrisi_clicked()
-{
-    ui->brojTrebvanja->clear();
-    ui->tabelaTrebovanja->clearFocus();
-}

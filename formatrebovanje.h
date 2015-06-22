@@ -16,7 +16,6 @@ public:
     ~FormaTrebovanje();
 
 private slots:
-    void on_obrisi_clicked();
 
 private:
     Ui::FormaTrebovanje *ui;

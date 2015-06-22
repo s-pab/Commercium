@@ -16,7 +16,6 @@ public:
     ~FormaPrijemnica();
 
 private slots:
-    void on_obrisi_clicked();
 
 private:
     Ui::FormaPrijemnica *ui;

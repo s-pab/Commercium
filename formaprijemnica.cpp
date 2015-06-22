@@ -13,7 +13,3 @@ FormaPrijemnica::~FormaPrijemnica()
     delete ui;
 }
 
-void FormaPrijemnica::on_obrisi_clicked()
-{
-
-}
