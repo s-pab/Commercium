@@ -407,14 +407,31 @@
              </spacer>
             </item>
             <item>
-             <widget class="QPushButton" name="pbUbaci">
+             <widget class="QLabel" name="label_12">
               <property name="text">
-               <string>Ubaci</string>
+               <string>Naziv:</string>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QLineEdit" name="lePretraga"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_11">
+              <property name="text">
+               <string>Količina:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="leKolicina"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pbUbaci">
+              <property name="text">
+               <string>Ubaci</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -430,7 +447,7 @@
         <item>
          <widget class="QPushButton" name="nova">
           <property name="text">
-           <string>Nova</string>
+           <string>Nova / Sačuvaj izmene</string>
           </property>
          </widget>
         </item>

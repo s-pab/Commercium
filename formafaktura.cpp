@@ -31,9 +31,13 @@ FormaFaktura::~FormaFaktura()
 void FormaFaktura::on_obrisi_clicked()
 {
     QSqlQuery query;
-    query.prepare("DELETE FROM FormaOsnovno WHERE sifraFakture=:SIFRA");
+    query.prepare("DELETE FROM FakturePodaci WHERE brFakture=:SIFRA");
     query.bindValue(":SIFRA",ui->racunBroj->text().toInt());
     query.exec();
+    query.prepare("DELETE FROM FaktureOsnovno WHERE sifraFakture=:SIFRA");
+    query.bindValue(":SIFRA",ui->racunBroj->text().toInt());
+    query.exec();
+
     osvezi();
 }
 
@@ -49,7 +53,6 @@ void FormaFaktura::on_nova_clicked()
         return;
     }
     QSqlQuery query;
-    QSqlQuery query2;
     bool postoji = false;
     query.exec("SELECT sifraFakture FROM FaktureOsnovno");
     while(query.next())
@@ -92,10 +95,10 @@ void FormaFaktura::pretraga(QString naziv)
 {
     QSqlQuery query;
     if(naziv == "")
-        query.prepare("SELECT sifraProizvoda,nazivProizvoda,nabavnaCena,kolicina FROM Artikl");
+        query.prepare("SELECT sifraProizvoda,nazivProizvoda,ProdajnaCena FROM Artikl");
     else
     {
-        query.prepare("SELECT SifraProizvoda,NazivProizvoda,ProdajnaCena,Kolicina,Ukupno FROM PopisPodaci WHERE NazivProizvoda LIKE '%'+?+'%'");
+        query.prepare("SELECT SifraProizvoda,NazivProizvoda,ProdajnaCena FROM Artikl WHERE NazivProizvoda LIKE '%'+?+'%'");
         query.addBindValue(naziv);
     }
     query.exec();
@@ -115,8 +118,43 @@ void FormaFaktura::on_lePretraga_textChanged(const QString &arg1)
 
 void FormaFaktura::on_pbUbaci_clicked()
 {
+    QSqlQuery query;
+    bool postoji = false;
+    query.exec("SELECT sifraFakture FROM FaktureOsnovno");
+    while(query.next())
+    {
+        if(query.value(0).toInt() == ui->racunBroj->text().toInt())
+        {
+            postoji=true;
+            break;
+        }
+    }
+    if(!postoji)
+    {
+        QMessageBox msg;
+        msg.setText("Faktura pod tom šifrom ne postoji u bazi");
+        msg.setWindowTitle("Greška");
+        msg.addButton(QMessageBox::Ok);
+        msg.exec();
+    }
     if(ui->racunBroj->text()=="")
+    {
+        QMessageBox msg;
+        msg.setText("Unesite broj fakture");
+        msg.setWindowTitle("Greška");
+        msg.addButton(QMessageBox::Ok);
+        msg.exec();
         return;
+    }
+    if(ui->leKolicina->text()=="")
+    {
+        QMessageBox msg;
+        msg.setText("Unesite količinu");
+        msg.setWindowTitle("Greška");
+        msg.addButton(QMessageBox::Ok);
+        msg.exec();
+        return;
+    }
     QSqlQuery query2;
     QModelIndex index = ui->twArtikli->currentIndex();
     int row = index.row();
@@ -132,7 +170,7 @@ void FormaFaktura::on_pbUbaci_clicked()
     query2.bindValue(":SIFRA",index.sibling(row,0).data().toInt());
     query2.bindValue(":NAZIV",index.sibling(row,1).data().toString());
     query2.bindValue(":CENA",index.sibling(row,2).data().toInt());
-    query2.bindValue(":KOLICINA",index.sibling(row,3).data().toInt());
+    query2.bindValue(":KOLICINA",ui->leKolicina->text().toInt());
     query2.bindValue(":brFakture",ui->racunBroj->text().toInt());
     query2.exec();
     osvezi();
@@ -141,8 +179,8 @@ void FormaFaktura::on_pbUbaci_clicked()
 void FormaFaktura::osvezi()
 {
     QSqlQuery query;
-    //query.prepare("SELECT SifraProizvoda,NazivProizvoda,ProdajnaCena,Kolicina,Ukupno FROM FakturePodaci WHERE brFakture = :brf");
-    query.prepare("SELECT * FROM FakturePodaci WHERE brFakture = :brf");
+    query.prepare("SELECT SifraProizvoda,NazivProizvoda,ProdajnaCena,Kolicina FROM FakturePodaci WHERE brFakture = :brf");
+    //query.prepare("SELECT * FROM FakturePodaci WHERE brFakture = :brf");
     query.bindValue(":brf",ui->racunBroj->text().toInt());
     query.exec();
     QSqlQueryModel* model = new QSqlQueryModel(this);
@@ -210,13 +248,26 @@ void FormaFaktura::on_izmeni_clicked()
     }
     else
     {
-        query.prepare("INSERT INTO FaktureOsnovno (sifraFakture,datum,valuta) VALUES (:SIFRA,:DATUM,:VALUTA)");
+        query.prepare("SELECT * FROM FaktureOsnovno WHERE sifraFakture=:SIFRA");
         query.bindValue(":SIFRA",ui->racunBroj->text().toInt());
-        QDate Datum = ui->datumPlacanja->date();
-        query.bindValue(":DATUM",Datum);
-        query.bindValue(":VALUTA",ui->valuta->text().toInt());
         query.exec();
-        query.prepare("SELECT SifraProizvoda,NazivProizvoda,ProdajnaCena,Kolicina,Ukupno FROM FakturePodaci WHERE brFakture = :brFakture");
+        if(query.next())
+        {
+            //ui->racunBroj->setText(query.value(0).toString());
+            ui->datumRacuna->setDate(query.value(2).toDate());
+            query2.prepare("SELECT sifra,naziv,ulica,mesto,pib,tekuciRacun FROM Komitenti WHERE sifra=:SIFRAKOM");
+            query2.bindValue(":SIFRAKOM",query.value(5).toInt());
+            query2.exec();
+            if(query2.next())
+            {
+                ui->sifra->setText(query2.value(0).toString());
+                ui->PIB->setText(query2.value(4).toString());
+                ui->kupac->setText(query2.value(1).toString());
+                ui->mesto->setText(query2.value(3).toString());
+            }
+        }
+
+        query.prepare("SELECT SifraProizvoda,NazivProizvoda,ProdajnaCena,Kolicina FROM FakturePodaci WHERE brFakture = :brFakture");
         query.bindValue(":brFakture",ui->racunBroj->text().toInt());
         query.exec();
         QSqlQueryModel* model = new QSqlQueryModel(this);
