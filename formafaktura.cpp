@@ -179,7 +179,7 @@ void FormaFaktura::osvezi()
     query.prepare("SELECT SifraProizvoda,NazivProizvoda,ProdajnaCena,Kolicina FROM FakturePodaci WHERE brFakture = :brf");
     query.bindValue(":brf",ui->racunBroj->text().toInt());
     query.exec();
-    float ukupno;
+    float ukupno=0;
     while(query.next())
     {
         ukupno+=query.value(2).toFloat()*query.value(3).toFloat();

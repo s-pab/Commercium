@@ -70,22 +70,20 @@ void FormaTrebovanje::on_nova_clicked()
     }
     if(postoji)
     {
-        query.prepare("UPDATE TrebovanjeOsnovno (sifraTrebovanja,datum,komitent,ukupnavrednost) VALUES (:SIFRA,:DATUM,:KOMITENT,:UKUPNAVREDNOST)");
+        query.prepare("UPDATE TrebovanjeOsnovno (sifraTrebovanja,datum,komitent) VALUES (:SIFRA,:DATUM,:KOMITENT)");
         query.bindValue(":SIFRA",ui->brojTrebovanja->text().toInt());
         QDate Datum = ui->datum->date();
         query.bindValue(":DATUM",Datum);
         query.bindValue(":KOMITENT",ui->komitent->text().toInt());
-        query.bindValue(":UKUPNAVREDNOST",ui->ukupnaVrednost->text().toDouble());
         query.exec();
     }
     else
     {
-        query.prepare("INSERT INTO TrebovanjeOsnovno (sifraTrebovanja,datum,komitent,ukupnavrednost) VALUES (:SIFRA,:DATUM,:KOMITENT,:UKUPNAVREDNOST)");
+        query.prepare("INSERT INTO TrebovanjeOsnovno (sifraTrebovanja,datum,komitent) VALUES (:SIFRA,:DATUM,:KOMITENT)");
         query.bindValue(":SIFRA",ui->brojTrebovanja->text().toInt());
         QDate Datum = ui->datum->date();
         query.bindValue(":DATUM",Datum);
         query.bindValue(":KOMITENT",ui->komitent->text().toInt());
-        query.bindValue("UKUPNAVREDNOST",ui->ukupnaVrednost->text().toDouble());
         query.exec();
         osvezi();
     }
@@ -225,4 +223,9 @@ void FormaTrebovanje::on_izbaciArtikl_clicked()
     query.bindValue(":bt",ui->brojTrebovanja->text().toInt());
     query.exec();
     osvezi();
+}
+
+void FormaTrebovanje::on_brojTrebovanja_returnPressed()
+{
+     on_izmeni_clicked();
 }
