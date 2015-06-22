@@ -19,6 +19,7 @@ FormaFaktura::FormaFaktura(QWidget *parent) :
 {
     ui->setupUi(this);
     pretraga("");
+    on_leKupacPretraga_textChanged("");
 
 }
 
@@ -149,16 +150,18 @@ void FormaFaktura::on_pbUbaci_clicked()
         msg.exec();
         return;
     }
+    if(ui->leKolicina->text()=="0")
+    {
+        QMessageBox msg;
+        msg.setText("Ne možete uneti 0 artikala");
+        msg.setWindowTitle("Greška");
+        msg.addButton(QMessageBox::Ok);
+        msg.exec();
+        return;
+    }
     QSqlQuery query2;
     QModelIndex index = ui->twArtikli->currentIndex();
     int row = index.row();
-    /*ui->sifra->setText(index.sibling(row,0).data().toString());
-    ui->naziv->setText(index.sibling(row,1).data().toString());
-    ui->ulica->setText(index.sibling(row,2).data().toString());
-    ui->mesto->setText(index.sibling(row,3).data().toString());
-    ui->pib->setText(index.sibling(row,4).data().toString());
-    ui->tekuciracun->setText(index.sibling(row,5).data().toString());*/
-
 
     query2.prepare("INSERT INTO FakturePodaci (SIFRAPROIZVODA,NAZIVPROIZVODA,PRODAJNACENA,KOLICINA,brFakture) VALUES (:SIFRA,:NAZIV,:CENA,:KOLICINA,:brFakture)");
     query2.bindValue(":SIFRA",index.sibling(row,0).data().toInt());
@@ -174,9 +177,14 @@ void FormaFaktura::osvezi()
 {
     QSqlQuery query;
     query.prepare("SELECT SifraProizvoda,NazivProizvoda,ProdajnaCena,Kolicina FROM FakturePodaci WHERE brFakture = :brf");
-    //query.prepare("SELECT * FROM FakturePodaci WHERE brFakture = :brf");
     query.bindValue(":brf",ui->racunBroj->text().toInt());
     query.exec();
+    float ukupno;
+    while(query.next())
+    {
+        ukupno+=query.value(2).toFloat()*query.value(3).toFloat();
+    }
+    ui->leUkupno->setText(QString::number(ukupno));
     QSqlQueryModel* model = new QSqlQueryModel(this);
     model->setQuery(query);
     ui->prikaz->verticalHeader()->hide();
@@ -209,10 +217,6 @@ void FormaFaktura::on_pbUbaciKupca_clicked()
     ui->kupac->setText(index.sibling(row,1).data().toString());
     ui->mesto->setText(index.sibling(row,3).data().toString());
     ui->PIB->setText(index.sibling(row,4).data().toString());
-
-
-    //query2.bindValue(":SIFRA",index.sibling(row,0).data().toInt());
-
 }
 
 void FormaFaktura::on_izmeni_clicked()
