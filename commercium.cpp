@@ -29,6 +29,7 @@
 #include <QFileDialog>
 #include <QTimer>
 #include <QPixmap>
+#include <QDesktopServices>
 
 #include <QDateTime>
 
@@ -78,9 +79,15 @@ void MainWindow::on_actionZatvori_triggered()
 
 void MainWindow::on_actionNova_triggered()
 {
+    QMessageBox msg;
+    msg.setText("Ova funkcionalnost biće implementirana u narednoj verziji");
+    msg.setWindowTitle("Obaveštenje");
+    msg.addButton(QMessageBox::Ok);
+    msg.exec();
+    /*
     FormaLogovanja *fl=new FormaLogovanja(ui->mdiArea);
     fl->show();
-
+    */
 }
 
 
@@ -129,9 +136,14 @@ void MainWindow::on_actionProfaktura_triggered()
 
 void MainWindow::on_actionNivelacije_triggered()
 {
-    FormaNivelacija *fn=new FormaNivelacija(ui->mdiArea);
+    QMessageBox msg;
+    msg.setText("Ova funkcionalnost biće implementirana u narednoj verziji");
+    msg.setWindowTitle("Obaveštenje");
+    msg.addButton(QMessageBox::Ok);
+    msg.exec();
+  /*  FormaNivelacija *fn=new FormaNivelacija(ui->mdiArea);
     ui->mdiArea->addSubWindow(fn);
-    fn->showMaximized();
+    fn->showMaximized();**/
 }
 
 
@@ -139,6 +151,7 @@ void MainWindow::on_actionO_nama_triggered()
 {
     QLabel *image = new QLabel();
        image->setPixmap(QPixmap( ":/Images/SPABTeam.png"));
+       image->setMargin(10);
        image->show();
 }
 
@@ -223,4 +236,72 @@ void MainWindow::on_actionPrikaz_informacija_o_komitentima_triggered()
     FormaKomitent *fkp=new FormaKomitent (ui->mdiArea); //fkp kao forma komitenti prikaz
     ui->mdiArea->addSubWindow(fkp);
     fkp->showMaximized();
+}
+
+void MainWindow::on_actionIzmeni_3_triggered()
+{
+    QMessageBox msg;
+    msg.setText("Ova funkcionalnost biće implementirana u narednoj verziji");
+    msg.setWindowTitle("Obaveštenje");
+    msg.addButton(QMessageBox::Ok);
+    msg.exec();
+}
+
+void MainWindow::on_actionObri_i_3_triggered()
+{
+    QMessageBox msg;
+    msg.setText("Ova funkcionalnost biće implementirana u narednoj verziji");
+    msg.setWindowTitle("Obaveštenje");
+    msg.addButton(QMessageBox::Ok);
+    msg.exec();
+}
+
+void MainWindow::on_actionPrika_i_triggered()
+{
+    QMessageBox msg;
+    msg.setText("Ova funkcionalnost biće implementirana u narednoj verziji");
+    msg.setWindowTitle("Obaveštenje");
+    msg.addButton(QMessageBox::Ok);
+    msg.exec();
+}
+
+void MainWindow::on_actionLokalna_pomo_triggered()
+{
+    //otvori korisnicko uputstvo
+    QDesktopServices::openUrl(QUrl(QDir::currentPath()+"/uputstvo.doc", QUrl::TolerantMode));
+    //QDesktopServices::openUrl(QUrl("file:///C:/uputstvo.doc", QUrl::TolerantMode));
+
+    //QDesktopServices::openUrl(QUrl(":/Images/uputstvo.doc"));
+}
+
+void MainWindow::on_actionOnline_pomo_triggered()
+{
+    QMessageBox msg;
+    msg.setText("Ova funkcionalnost biće implementirana u narednoj verziji");
+    msg.setWindowTitle("Obaveštenje");
+    msg.addButton(QMessageBox::Ok);
+    msg.exec();
+}
+
+void MainWindow::on_actionO_aplikaciji_triggered()
+{
+    //forma o aplikaciji
+}
+
+void MainWindow::on_actionKnjiga_EDI_triggered()
+{
+    QMessageBox msg;
+    msg.setText("Ova funkcionalnost biće implementirana u narednoj verziji");
+    msg.setWindowTitle("Obaveštenje");
+    msg.addButton(QMessageBox::Ok);
+    msg.exec();
+}
+
+void MainWindow::on_actionKEPU_triggered()
+{
+    QMessageBox msg;
+    msg.setText("Ova funkcionalnost biće implementirana u narednoj verziji");
+    msg.setWindowTitle("Obaveštenje");
+    msg.addButton(QMessageBox::Ok);
+    msg.exec();
 }

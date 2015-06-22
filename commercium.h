@@ -59,6 +59,22 @@ private slots:
 
     void on_actionPrikaz_informacija_o_komitentima_triggered();
 
+    void on_actionIzmeni_3_triggered();
+
+    void on_actionObri_i_3_triggered();
+
+    void on_actionPrika_i_triggered();
+
+    void on_actionLokalna_pomo_triggered();
+
+    void on_actionOnline_pomo_triggered();
+
+    void on_actionO_aplikaciji_triggered();
+
+    void on_actionKnjiga_EDI_triggered();
+
+    void on_actionKEPU_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
