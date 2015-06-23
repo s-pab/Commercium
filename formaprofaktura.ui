@@ -274,7 +274,7 @@
                 </sizepolicy>
                </property>
                <property name="text">
-                <string>Nova</string>
+                <string>Nova/Sačuvaj</string>
                </property>
               </widget>
              </item>

@@ -18,6 +18,8 @@ FormaProfaktura::FormaProfaktura(QWidget *parent) :
     ui(new Ui::FormaProfaktura)
 {
     ui->setupUi(this);
+    pretraga("");
+    on_pretragaKupaca_textChanged("");
 }
 
 FormaProfaktura::~FormaProfaktura()
@@ -27,15 +29,14 @@ FormaProfaktura::~FormaProfaktura()
 
 void FormaProfaktura::on_obrisi_clicked()
 {
-    ui->sifraKupca->clear();
-    ui->PIB->clear();
-    ui->datumPredracuna->clear();
-    ui->kupac->clear();
-    ui->brojPredracuna->clear();
-    ui->mesto->clear();
-    ui->mestoIzdavanja->clear();
-    ui->valuta->clear();
-    ui->prikaz->clearFocus();
+    QSqlQuery query;
+    query.prepare("DELETE FROM ProfakturePodaci WHERE brProfakture=:SIFRA");
+    query.bindValue(":SIFRA",ui->brojPredracuna->text().toInt());
+    query.exec();
+    query.prepare("DELETE FROM ProfaktureOsnovno WHERE sifraProfakture=:SIFRA");
+    query.bindValue(":SIFRA",ui->brojPredracuna->text().toInt());
+    query.exec();
+    osvezi();
 }
 
 void FormaProfaktura::on_nova_clicked()
@@ -105,6 +106,8 @@ void FormaProfaktura::osvezi()
     query.exec();
     QSqlQueryModel* model = new QSqlQueryModel(this);
     model->setQuery(query);
+    ui->prikaz->verticalHeader()->hide();
+    ui->prikaz->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->prikaz->setModel(model);
     ui->prikaz->resizeColumnsToContents();
     ui->prikaz->resizeRowsToContents();
@@ -192,19 +195,60 @@ void FormaProfaktura::on_izmeni_clicked()
     }
     else
     {
-        query.prepare("INSERT INTO ProfaktureOsnovno (sifraProfakture,datum,valuta) VALUES (:SIFRA,:DATUM,:VALUTA)");
+      /*  query.prepare("INSERT INTO ProfaktureOsnovno (sifraProfakture,datum,valuta) VALUES (:SIFRA,:DATUM,:VALUTA)");
         query.bindValue(":SIFRA",ui->brojPredracuna->text().toInt());
         QDate Datum = ui->datumPredracuna->date();
         query.bindValue(":DATUM",Datum);
         query.bindValue(":VALUTA",ui->valuta->text().toInt());
         query.exec();
-        query.prepare("SELECT SifraProizvoda,NazivProizvoda,ProdajnaCena,Kolicina,Ukupno FROM ProfakturePodaci WHERE brProfakture = :brProfakture");
+        query.prepare("SELECT SifraProizvoda,NazivProizvoda,ProdajnaCena,Kolicina FROM ProfakturePodaci WHERE brProfakture = :brProfakture");
         query.bindValue(":brProfakture",ui->brojPredracuna->text().toInt());
         query.exec();
         QSqlQueryModel* model = new QSqlQueryModel(this);
         model->setQuery(query);
+        ui->prikaz->verticalHeader()->hide();
+        ui->prikaz->setSelectionBehavior(QAbstractItemView::SelectRows);
         ui->prikaz->setModel(model);
         ui->prikaz->resizeColumnsToContents();
         ui->prikaz->resizeRowsToContents();
+        */
+        query.prepare("SELECT * FROM ProfaktureOsnovno WHERE sifraProfakture=:SIFRA");
+        query.bindValue(":SIFRA",ui->brojPredracuna->text().toInt());
+        query.exec();
+        if(query.next())
+        {
+            //ui->racunBroj->setText(query.value(0).toString());
+            ui->datumPredracuna->setDate(query.value(2).toDate());
+            query2.prepare("SELECT sifra,naziv,ulica,mesto,pib,tekuciRacun FROM Komitenti WHERE sifra=:SIFRAKOM");
+            query2.bindValue(":SIFRAKOM",query.value(5).toInt());
+            query2.exec();
+            if(query2.next())
+            {
+                ui->sifraKupca->setText(query2.value(0).toString());
+                ui->PIB->setText(query2.value(4).toString());
+                ui->kupac->setText(query2.value(1).toString());
+                ui->mesto->setText(query2.value(3).toString());
+            }
+        }
+
+        query.prepare("SELECT SifraProizvoda,NazivProizvoda,ProdajnaCena,Kolicina FROM FakturePodaci WHERE brFakture = :brFakture");
+        query.bindValue(":brFakture",ui->brojPredracuna->text().toInt());
+        query.exec();
+        osvezi();
     }
+}
+
+void FormaProfaktura::on_pUkloniArtikl_clicked()
+{
+    QSqlQuery query;
+    QModelIndex index = ui->prikaz->currentIndex();
+    int row = index.row();
+    int sifra = index.sibling(row,1).data().toInt();
+
+    query.prepare("DELETE FROM ProfakturePodaci WHERE sifraProizvoda = :sp AND brProfakture = :bf");
+    query.bindValue(":sp",sifra);
+    query.bindValue(":bf",ui->brojPredracuna->text().toInt());
+    query.exec();
+
+    osvezi();
 }

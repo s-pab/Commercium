@@ -33,6 +33,8 @@ private slots:
 
     void on_izmeni_clicked();
 
+    void on_pUkloniArtikl_clicked();
+
 private:
     Ui::FormaProfaktura *ui;
 };

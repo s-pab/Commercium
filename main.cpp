@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
-    /*FormaLogovanja f;
+    FormaLogovanja f;
     int p=f.exec();
     if(p==QDialog::Accepted)
     {
@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     }
     else
         exit(0);
-    */
-    w.showMaximized();
+
+    //w.showMaximized();
     return a.exec();
 }
