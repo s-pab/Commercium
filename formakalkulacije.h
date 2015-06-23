@@ -33,8 +33,26 @@ private slots:
 
     void osvezi();
 
+    void on_komitentS_valueChanged(const QString &arg1);
+
+    void on_nabavna_valueChanged(double arg1);
+
+    void on_rabat_valueChanged(double arg1);
+
+    void on_marza_valueChanged(double arg1);
+
+    void on_prodajna_valueChanged(double arg1);
+
+    void on_ubaci_clicked();
+
+    void on_sacuvaj_clicked();
+
 private:
     Ui::FormaKalkulacije *ui;
+    double marzaT;
+    double rabatT;
+    double nabavnaT;
+    double prodajnaT;
 };
 
 #endif // FORMAKALKULACIJE_H

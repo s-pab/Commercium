@@ -203,25 +203,12 @@
                   </size>
                  </property>
                  <property name="text">
-                  <string>Naziv komitenta:</string>
+                  <string>Valuta:</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QLineEdit" name="komitentN">
-                 <property name="minimumSize">
-                  <size>
-                   <width>200</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>200</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                </widget>
+                <widget class="QSpinBox" name="valuta"/>
                </item>
               </layout>
              </item>
@@ -271,7 +258,7 @@
           </property>
           <layout class="QGridLayout" name="gridLayout_2">
            <item row="0" column="0">
-            <layout class="QVBoxLayout" name="verticalLayout_12">
+            <layout class="QVBoxLayout" name="verticalLayout_12" stretch="0,0,0,0">
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_3">
                <item>
@@ -326,10 +313,95 @@
               </layout>
              </item>
              <item>
-              <widget class="QListView" name="prikaz"/>
+              <layout class="QHBoxLayout" name="horizontalLayout_6">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_15">
+                 <item>
+                  <widget class="QLabel" name="label_7">
+                   <property name="text">
+                    <string>Nabavna cena:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="nabavna">
+                   <property name="maximum">
+                    <double>99999999.989999994635582</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_17">
+                 <item>
+                  <widget class="QLabel" name="label_8">
+                   <property name="text">
+                    <string>Rabat[%]:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="rabat"/>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_16">
+                 <item>
+                  <widget class="QLabel" name="label_9">
+                   <property name="text">
+                    <string>Marža[%]:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="marza">
+                   <property name="maximum">
+                    <double>999999999.990000009536743</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_14">
+                 <item>
+                  <widget class="QLabel" name="label_10">
+                   <property name="text">
+                    <string>Prodajna cena:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="prodajna">
+                   <property name="maximum">
+                    <double>999999999.990000009536743</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QTableView" name="prikaz"/>
              </item>
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <item>
+                <widget class="QPushButton" name="sacuvaj">
+                 <property name="minimumSize">
+                  <size>
+                   <width>112</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Sačuvaj/Završi</string>
+                 </property>
+                </widget>
+               </item>
                <item>
                 <spacer name="horizontalSpacer">
                  <property name="orientation">
@@ -354,19 +426,7 @@
                 </widget>
                </item>
                <item>
-                <widget class="QLineEdit" name="ukupno1"/>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="ukupno2"/>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="ukupno3"/>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="ukupno4"/>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="ukupno5"/>
+                <widget class="QLineEdit" name="ukupno"/>
                </item>
               </layout>
              </item>
@@ -378,13 +438,16 @@
        </layout>
       </item>
       <item>
-       <layout class="QVBoxLayout" name="verticalLayout_13" stretch="1,1">
+       <layout class="QVBoxLayout" name="verticalLayout_13" stretch="0,0">
         <item>
          <widget class="QGroupBox" name="groupBox_4">
           <property name="title">
            <string>Prikaz informacija o kupcima i njihova pretraga</string>
           </property>
           <layout class="QGridLayout" name="gridLayout_3">
+           <item row="1" column="0">
+            <widget class="QTableView" name="twKupac"/>
+           </item>
            <item row="0" column="0">
             <layout class="QHBoxLayout" name="horizontalLayout_4">
              <item>
@@ -399,9 +462,6 @@
              </item>
             </layout>
            </item>
-           <item row="1" column="0">
-            <widget class="QTableView" name="twKupac"/>
-           </item>
           </layout>
          </widget>
         </item>
@@ -412,27 +472,31 @@
           </property>
           <layout class="QGridLayout" name="gridLayout_4">
            <item row="0" column="0">
-            <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <layout class="QVBoxLayout" name="verticalLayout_18" stretch="0,1">
              <item>
-              <widget class="QLineEdit" name="pretragaArtikl"/>
+              <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="0,1">
+               <item>
+                <widget class="QLineEdit" name="pretragaArtikl"/>
+               </item>
+               <item>
+                <widget class="QPushButton" name="ubaciArtikl">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string>Ubaci Artikl</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
              </item>
              <item>
-              <widget class="QPushButton" name="ubaciArtikl">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="text">
-                <string>Ubaci Artikl</string>
-               </property>
-              </widget>
+              <widget class="QTableView" name="twArtikli"/>
              </item>
             </layout>
-           </item>
-           <item row="1" column="0">
-            <widget class="QTableView" name="twArtikli"/>
            </item>
           </layout>
          </widget>
